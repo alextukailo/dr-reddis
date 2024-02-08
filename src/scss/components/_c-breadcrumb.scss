@@ -1,0 +1,48 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  @include mobile {
+    margin-bottom: 0.8rem;
+  }
+
+  .home {
+    text-transform: capitalize;
+  }
+
+  span:last-child span {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: var(--colorDarkGrey);
+    border-bottom: 0.1rem solid;
+    @include mobile {
+      font-size: 1.6rem;
+    }
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: var(--colorGrey);
+    border-bottom: 0.1rem solid transparent;
+
+    @include mobile {
+      font-size: 1.6rem;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      background: url('../img/icons/chevron_right.svg') no-repeat;
+      width: 0.677rem;
+      height: 1.202rem;
+      background-size: cover;
+      margin: 0 1rem;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+:root {
+  --colorMain: #ffffff;
+  --colorDarkWhite: #eceef3;
+  --colorLightGrey: #e9ebef;
+  --colorBlue: #badfff;
+  --colorDarkBlue: #24549f;
+  --colorYellow: #f8d250;
+  --colorGrey: #9cacc2;
+  --colorDarkGrey: #334d6e;
+  --colorBlack: #051932;
+  --colorGreen: #00c98f;
+  --colorHoverGreen: #05db9d;
+  --colorRed: #ea2b4d;
+  --colorFontBlack: #3d4252;
+  --colorFontWhite: #f1f1f1;
+  --shadowDark: linear-gradient(180deg, #1b3d64 0%, #0e2643 8.79%);
+  --shadowDarkMenu: linear-gradient(180deg, #0e3e75 0%, #0e2643 52.79%);
+}
+@custom-media --tb-screen (width >= 537px);
+@custom-media --md-screen (width >= 1023px);
+@custom-media --lg-screen (width >= 1200px);
+@custom-media --xlg-screen (width >= 1500px);
+@custom-media --xxlg-screen (width >= 1921px);
+
+@custom-media --mobile-screen (width <= 537px);
+@custom-media --laptop-screen (width <= 768px);
+@custom-media --desctop-screen (width <= 1200px);
+
+@custom-selector :--heading h1, h2, h3, h4;
+
+:--heading {
+  margin: 0;
+  padding: 0;
+}

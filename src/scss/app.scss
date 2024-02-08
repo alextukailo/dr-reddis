@@ -1,0 +1,25 @@
+@import './mixins/mixins';
+//base
+@import './base/general';
+@import './base/typography';
+@import './base/variables';
+
+//modules
+@import './modules/buttons';
+@import './modules/modifiers';
+@import './modules/swiper';
+@import './modules/form';
+@import './modules/pagination';
+
+//components
+@import './components/c-header';
+@import './components/c-hero';
+@import './components/c-news';
+@import './components/c-about';
+@import './components/c-footer';
+
+@import './components/c-404';
+@import './components/c-categories';
+@import './components/c-react-calendar';
+@import './components/c-modal';
+@import './components/c-toggle';

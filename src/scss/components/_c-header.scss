@@ -1,0 +1,156 @@
+.header {
+  &.colored {
+    .header__inner {
+      transition: all 0.5s ease;
+      background-color: var(--colorDarkBlue);
+    }
+  }
+
+  &__inner {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    // background-color: var(--colorDarkBlue);
+    z-index: 9999;
+    @include mobile {
+      // height: calc(100vh - 42.6rem);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    align-items: center;
+  }
+
+  &__logo {
+    max-width: 26rem;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__logosm {
+    max-width: 16.7rem;
+    width: 100%;
+    object-fit: contain;
+    padding: 2rem;
+  }
+
+  .nav {
+    margin-left: auto;
+  }
+
+  .header-top {
+    width: max-content;
+    display: flex;
+    padding: 0 4rem;
+    margin-left: auto;
+    background-color: var(--colorMain);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 6% 100%);
+
+    &__item {
+      font-size: 1.3rem;
+      font-weight: 600;
+      padding: 0.7rem;
+    }
+  }
+
+  .header-main {
+    width: max-content;
+    display: flex;
+    padding: 1rem 4rem;
+    margin-left: auto;
+
+    &__item {
+      position: relative;
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 0.9rem 1.1rem;
+      color: var(--colorMain);
+
+      &:hover .header-main__nested {
+        display: block;
+      }
+
+      & > a.active {
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid white;
+      }
+    }
+
+    &__nested {
+      display: none;
+      width: max-content;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      width: max-content;
+      background-color: var(--colorMain);
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+      z-index: 99;
+    }
+
+    &__nested-item {
+      position: relative;
+      width: 100%;
+      background-color: var(--colorMain);
+      font-size: 1.5rem;
+      color: var(--colorBlack);
+      font-weight: 500;
+      padding: 1rem;
+      cursor: pointer;
+      &:hover {
+        color: var(--colorMain);
+        background-color: #292929;
+      }
+      &:hover .header-main__nested-secondary {
+        display: block;
+      }
+    }
+
+    &__nested-secondary {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: -110px;
+      width: max-content;
+      background-color: var(--colorMain);
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    &__nested-secondary-item {
+      background-color: var(--colorMain);
+      font-size: 1.5rem;
+      color: var(--colorBlack);
+      font-weight: 500;
+      padding: 1rem;
+      cursor: pointer;
+      &:hover {
+        color: var(--colorMain);
+        background-color: #292929;
+      }
+    }
+  }
+}
+
+#mobile-menu .header-main__item {
+  font-size: 1.8rem;
+  & > div {
+    font-size: 1.8rem;
+    border-bottom: 1px solid;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .header-main__nested {
+    font-size: 1.4rem;
+    padding-left: 2rem;
+
+    &-item {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.form_input {
+  input[type='text'],
+  input[type='email'],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(30 58 138 / 1);
+    border-radius: 8px;
+    resize: none;
+  }
+
+  textarea {
+    max-height: 135px;
+  }
+
+  input[type='submit'] {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(153 27 27 / 1);
+    padding: 15px 20px;
+    color: white;
+    border-radius: 30px;
+  }
+}
+
+.zion-form {
+  label {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    input {
+      width: 100%;
+      border: 1px solid var(--colorUSBlue);
+      border-radius: 0.8rem;
+      padding: 1rem;
+      outline: none;
+
+      &:disabled {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .rmdp-container {
+    display: block !important;
+  }
+
+  .rmdp-input {
+    width: 100% !important;
+    border: 1px solid var(--colorUSBlue) !important;
+    border-radius: 0.8rem !important;
+    padding: 2rem !important;
+    outline: none;
+
+    &:disabled {
+      opacity: 0.7;
+    }
+  }
+}

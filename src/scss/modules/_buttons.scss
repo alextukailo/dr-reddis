@@ -1,0 +1,54 @@
+.button {
+  display: block;
+  width: max-content;
+  padding: 1.48rem 2.47rem 1.22rem 1.7rem;
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 150%;
+  color: var(--colorBlack);
+  text-align: center;
+  transition-duration: 0.3s;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  @include mobile {
+    font-size: 1.55rem;
+    line-height: 150%;
+    padding: 1rem 1.5rem;
+  }
+
+  &.button-blue {
+    background-color: var(--colorBlue);
+  }
+
+  &.button-black {
+    background-color: var(--colorBlack);
+    color: var(--colorMain);
+  }
+
+  &.button-white {
+    background-color: var(--colorMain);
+    color: var(--colorBlack);
+  }
+
+  &.button-yellow {
+    background-color: var(--colorYellow);
+    color: var(--colorBlack);
+  }
+
+  &.button-link-blue {
+    font-weight: 600;
+    color: var(--colorDarkBlue);
+    background-color: none;
+    padding: 0;
+  }
+
+  &.button-link-black {
+    font-weight: 600;
+    color: var(--colorBlack);
+    background-color: none;
+    padding: 0;
+  }
+}
