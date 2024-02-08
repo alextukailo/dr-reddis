@@ -9,10 +9,10 @@ html {
 
 body {
   font:
-    1.6rem 'Gotham-pro-medium',
+    1.6rem 'InterTight-Regular',
     sans-serif;
   margin: 0;
-  background: var(--colorMain);
+  // background: var(--colorBlack);
   font-weight: 400;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
@@ -22,7 +22,7 @@ body {
 * {
   box-sizing: border-box;
   line-height: 1.6;
-  font-family: 'Gotham-pro-medium';
+  font-family: 'InterTight-Regular';
   font-weight: 300;
 }
 
@@ -46,33 +46,29 @@ table {
   }
 }
 
-.font-gotham-bold {
-  font-family: 'Gotham-bold' !important;
+.font-intertight-bold { 
+  font-family: 'InterTight-Bold' !important;
 }
 
-.font-gotham-ultra {
-  font-family: 'Gotham-Ultra' !important;
+.font-intertight-medium {
+  font-family: 'InterTight-Medium' !important;
 }
 
-.font-gotham-pro-medium {
-  font-family: 'Gotham-pro-medium' !important;
-}
-
-.font-signerica-fat {
-  font-family: 'Signerica-Fat' !important;
-}
-
-.font-signerica-medium {
-  font-family: 'Signerica-Medium' !important;
-}
-
-.font-signerica-thin {
-  font-family: 'Signerica-Thin' !important;
+.font-gotham-pro-regular {
+  font-family: 'InterTight-Regular' !important;
 }
 
 .container {
   position: relative;
-  max-width: 128rem !important;
+  max-width: 110rem !important;
+  width: 100%;
+  padding: 0 1.7rem;
+  margin: 0 auto;
+}
+
+.container-md {
+  position: relative;
+  max-width: 73rem !important;
   width: 100%;
   padding: 0 1.7rem;
   margin: 0 auto;
@@ -547,10 +543,9 @@ template {
   background-color: transparent;
   background-image: linear-gradient(210deg, #04032000 0%, #050425 65%);
   opacity: 0.32;
-  transition:
-    background 0.3s,
-    border-radius 0.3s,
-    opacity 0.3s;
+  background: 0.3s;
+  border-radius: 0.3s;
+  opacity: 0.3s;
   height: 100%;
   width: 100%;
   top: 0;
@@ -559,20 +554,38 @@ template {
 }
 
 .section {
-  padding: 7rem 0;
-  font-family: 'gotham-bold', sans-serif;
+  // padding: 7rem 0;
 
   @include mobile {
-    padding: 5rem 0;
+    // padding: 5rem 0;
   }
 
   &__heading {
-    font-size: 5.3rem;
+    font-family: 'InterTight-Bold';
+    font-size: 8rem;
     line-height: 1.2;
     font-weight: 600;
+    text-align: center;
 
     @include mobile {
       font-size: 3.3rem;
+    }
+  }
+
+  &__description {
+    font-family: 'InterTight-Regular';
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: center;
+    max-width: 48.5rem;
+    width: 100%;
+    opacity: 80%;
+    margin: 0 auto;
+
+    @include mobile {
+      font-size: 1.3rem;
     }
   }
 }
@@ -583,7 +596,7 @@ template {
 
 .page-free-styling {
   h1 {
-    font-size: 3rem;
+    font-size: 4.5rem;
     font-weight: 600;
     line-height: 1;
     margin-bottom: 2rem;
@@ -597,7 +610,7 @@ template {
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 600;
     line-height: 1;
     margin-bottom: 2rem;
@@ -610,24 +623,42 @@ template {
 
   h3 {
     font-size: 3rem;
-    font-weight: 600;
-    line-height: 1;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0%;
     margin-bottom: 2rem;
   }
 
   p {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
     margin-bottom: 1.7rem;
+    opacity: 70%;
   }
 
   img {
+    border-radius: 60px;
     margin-bottom: 3rem;
   }
 
-  font-size: 1.8rem;
+  ul, ol {
+    padding-left: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  ul li {
+    list-style: disc !important;
+  }
+}
+
+.text-c-normal {
+  font-family: 'InterTight-Regular';
+  font-size: 16px;
   font-weight: 400;
-  margin-bottom: 1.7rem;
+  line-height: 140%;
+  letter-spacing: 0%;
 }
 
 .full-width-content {
@@ -647,24 +678,6 @@ template {
   }
 }
 
-.ellipsis {
-  text-overflow: ellipsis;
-  /* enables ellipsis */
-  white-space: nowrap;
-  /* keeps the text in a single line */
-  overflow: hidden;
-  /* keeps the element from overflowing its parent */
-}
-
-.news-tab.active {
-  color: var(--colorMain);
-  background-color: var(--colorBlack);
-}
-
-.news-content {
-  display: none;
-}
-
-.news-content.active {
-  display: block;
+.hint {
+  background: rgba(244, 240, 233, 0.8);
 }

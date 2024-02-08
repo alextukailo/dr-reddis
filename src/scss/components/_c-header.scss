@@ -2,7 +2,7 @@
   &.colored {
     .header__inner {
       transition: all 0.5s ease;
-      background-color: var(--colorDarkBlue);
+      background-color: rgba(244, 240, 233, 0.8);
     }
   }
 
@@ -12,11 +12,7 @@
     top: 0;
     left: 0;
     background-color: transparent;
-    // background-color: var(--colorDarkBlue);
     z-index: 9999;
-    @include mobile {
-      // height: calc(100vh - 42.6rem);
-    }
   }
 
   &__content {

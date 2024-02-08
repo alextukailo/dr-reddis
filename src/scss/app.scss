@@ -6,6 +6,7 @@
 
 //modules
 @import './modules/buttons';
+@import './modules/tags';
 @import './modules/modifiers';
 @import './modules/swiper';
 @import './modules/form';
@@ -13,13 +14,5 @@
 
 //components
 @import './components/c-header';
-@import './components/c-hero';
-@import './components/c-news';
-@import './components/c-about';
-@import './components/c-footer';
+@import './components/c-breadcrumb';
 
-@import './components/c-404';
-@import './components/c-categories';
-@import './components/c-react-calendar';
-@import './components/c-modal';
-@import './components/c-toggle';

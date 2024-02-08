@@ -7,38 +7,29 @@
     margin-bottom: 0.8rem;
   }
 
-  .home {
-    text-transform: capitalize;
-  }
+  a {
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+    color: var(--colorGrey);
 
-  span:last-child span {
-    font-weight: 500;
-    font-size: 1.8rem;
-    line-height: 2.7rem;
-    color: var(--colorDarkGrey);
-    border-bottom: 0.1rem solid;
     @include mobile {
       font-size: 1.6rem;
     }
-  }
 
-  a {
-    display: inline-flex;
-    align-items: center;
-    font-weight: 500;
-    font-size: 1.8rem;
-    line-height: 2.7rem;
-    color: var(--colorGrey);
-    border-bottom: 0.1rem solid transparent;
+    &:last-child {
+      color: var(--colorBlack);
+    }
 
-    @include mobile {
-      font-size: 1.6rem;
+    &:last-child:after {
+      content: '';
     }
 
     &:after {
-      content: '';
+      content: '-';
       display: block;
-      background: url('../img/icons/chevron_right.svg') no-repeat;
       width: 0.677rem;
       height: 1.202rem;
       background-size: cover;

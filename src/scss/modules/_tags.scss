@@ -1,9 +1,9 @@
-.button {
+.tag {
   display: block;
   width: max-content;
   height: max-content;
-  padding: 2rem;
-  font-size: 1.8rem;
+  padding: 1rem;
+  font-size: 1.4rem;
   font-weight: 500;
   line-height: 22px;
   letter-spacing: 0%;
@@ -27,7 +27,7 @@
     padding: 1rem 1.5rem;
   }
 
-  &.button-ghost {
+  &.tag-ghost {
     background: none;
     border: 1px solid var(--colorGrey);
     color: var(--colorGrey);
@@ -38,22 +38,19 @@
     }
   }
 
-  &.button-blue {
+  &.tag-blue {
     background: var(--colorBlue);
     &:hover {
       background: var(--buttonBlueHover);
     }
   }
 
-  &.button-indigo {
-    background: var(--buttonBlueHover);
-    color: var(--colorMain);
-    &:hover {
-      background: var(--buttonBlueHover);
-    }
+  &.tag-indigo {
+    background: var(--tagIndigo);
+    color: var(--buttonWhiteColor);
   }
 
-  &.button-black {
+  &.tag-black {
     background: var(--colorBlack);
     color: var(--colorMain);
     &:hover {
@@ -61,12 +58,12 @@
     }
   }
 
-  &.button-white {
+  &.tag-white {
     background: var(--gradientWhite);
+    color: var(--colorMain);
+  }
+  &.tag-white-secondary {
+    background: var(--colorMain);
     color: var(--buttonWhiteColor);
-    &:hover {
-      background: var(--buttonBlackHover);
-      color: var(--colorMain);
-    }
   }
 }
