@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Knowledge Base - Dr Reddis</title>
+    <link rel="stylesheet" href="../dist/css/index.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="header__inner">
+            <div class="header__content justify-between container border-b-[1px] border-white">
+                <a href="/"><img class="h-[63px] xl:h-auto" src="../dist/img/icons/logo_white.svg" alt="logo"></a>
+                <a href="/pages/profile" class="flex items-center">
+                    <div class="block mr-4 p-4 rounded-full flex items-center justify-center w-[50px] h-[50px] text-black xl:text-white bg-blur">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <span class="text-2xl text-black xl:text-white">Вход</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="hero w-[100vw] mt-[65px] xl:mt-0 h-[700px] xl:h-[800px] rounded-t-[30px] xl:rounded-t-[0] rounded-b-[30px] xl:rounded-b-[60px] overflow-hidden xl:flex items-center"
+            style="background: url('../dist/img/backgrounds/self-bg.jpeg') no-repeat center; background-size: cover;">
+            <div class="container flex flex-col items-center xl:block mt-24 xl:mt-0">
+                <a href="../" class="button button_small button-blur mb-6"><i class="fa-solid fa-angle-left"></i>
+                    Назад</a>
+                <h1 class="section__heading text-left text-white mb-6">Самоконтроль</h1>
+                <p class="text-3xl text-white opacity-60 text-center xl:text-left xl:w-1/2 leading-snug">Здесь вы найдете наборы карточек,
+                    которые помогут ответить на многие вопросы
+                   по поводу здоровья. Например, с их помощью можно определить, какой вид боли вам докучает.</p>
+            </div>
+        </div>
+        <section class="section">
+            <div class="container !max-w-[1200px] px-14 -mt-16 xl:mt-0">
+                <div class="flex flex-wrap justify-center [&>.knowledge-base-card:nth-child(4n)]:mr-0">
+
+                    <div class="knowledge-base-card w-full group xl:w-[calc(25%-1.5rem)] mb-10 bg-[#f7f7ff] p-10 xl:pb-[5.7rem] hover:pb-10 rounded-[20px] overflow-hidden cursor-pointer xl:mr-6">
+                        <img src="../dist/img/card.jpeg" alt="title" class="object-cover h-[190px] rounded-[20px] mb-14 group-hover:mb-2">
+                        <div>
+                            <div class="flex justify-between mb-6">
+                                <div class="tag tag-white rounded-[10px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
+                                <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60">+100 монеток</span></div>
+                                <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
+                                <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
+                            </div>
+                            <p class="text-3xl">Как хорошо вы знаете разные виды боли?</p>
+                            <a href="/" class="button button-indigo py-6 xl:hidden group-hover:block mt-4">Изучить карточки <i class="fa-solid fa-angle-right ml-4"></i></a>
+                            <!-- <a href="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
+                        </div>
+                    </div>
+
+                    <div class="knowledge-base-card w-full group xl:w-[calc(25%-1.5rem)] mb-10 bg-[#f7f7ff] p-10 xl:pb-[5.7rem] hover:pb-10 rounded-[20px] overflow-xl:hidden cursor-pointer xl:mr-6">
+                        <img src="../dist/img/card.jpeg" alt="title" class="object-cover h-[190px] rounded-[20px] mb-14 group-hover:mb-2">
+                        <div>
+                            <div class="flex justify-between mb-6">
+                                <div class="tag tag-white rounded-[10px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
+                                <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60">+100 монеток</span></div>
+                                <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
+                                <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
+                            </div>
+                            <p class="text-3xl">Как хорошо вы знаете разные виды боли?</p>
+                            <a href="/" class="button button-indigo py-6 xl:hidden group-hover:block mt-4">Изучить карточки <i class="fa-solid fa-angle-right ml-4"></i></a>
+                            <!-- <a href="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
+                        </div>
+                    </div>
+
+                    <div class="knowledge-base-card w-full group xl:w-[calc(25%-1.5rem)] mb-10 bg-[#f7f7ff] p-10 xl:pb-[5.7rem] hover:pb-10 rounded-[20px] overflow-xl:hidden cursor-pointer xl:mr-6">
+                        <img src="../dist/img/card.jpeg" alt="title" class="object-cover h-[190px] rounded-[20px] mb-14 group-hover:mb-2">
+                        <div>
+                            <div class="flex justify-between mb-6">
+                                <div class="tag tag-white rounded-[10px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
+                                <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60">+100 монеток</span></div>
+                                <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
+                                <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
+                            </div>
+                            <p class="text-3xl">Как хорошо вы знаете разные виды боли?</p>
+                            <a href="/" class="button button-indigo py-6 xl:hidden group-hover:block mt-4">Изучить карточки <i class="fa-solid fa-angle-right ml-4"></i></a>
+                            <!-- <a href="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
+                        </div>
+                    </div>
+
+                    <div class="knowledge-base-card w-full group xl:w-[calc(25%-1.5rem)] mb-10 bg-[#f7f7ff] p-10 xl:pb-[5.7rem] hover:pb-10 rounded-[20px] overflow-xl:hidden cursor-pointer xl:mr-6">
+                        <img src="../dist/img/card.jpeg" alt="title" class="object-cover h-[190px] rounded-[20px] mb-14 group-hover:mb-2">
+                        <div>
+                            <div class="flex justify-between mb-6">
+                                <div class="tag tag-white rounded-[10px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
+                                <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60">+100 монеток</span></div>
+                                <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
+                                <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
+                            </div>
+                            <p class="text-3xl">Как хорошо вы знаете разные виды боли?</p>
+                            <a href="/" class="button button-indigo py-6 xl:hidden group-hover:block mt-4">Изучить карточки <i class="fa-solid fa-angle-right ml-4"></i></a>
+                            <!-- <a href="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
+                        </div>
+                    </div>
+
+                    <div class="knowledge-base-card w-full group xl:w-[calc(25%-1.5rem)] mb-10 bg-[#f7f7ff] p-10 xl:pb-[5.7rem] hover:pb-10 rounded-[20px] overflow-xl:hidden cursor-pointer xl:mr-6">
+                        <img src="../dist/img/card.jpeg" alt="title" class="object-cover h-[190px] rounded-[20px] mb-14 group-hover:mb-2">
+                        <div>
+                            <div class="flex justify-between mb-6">
+                                <div class="tag tag-white rounded-[10px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
+                                <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60">+100 монеток</span></div>
+                                <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
+                                <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
+                            </div>
+                            <p class="text-3xl">Как хорошо вы знаете разные виды боли?</p>
+                            <a href="/" class="button button-indigo py-6 xl:hidden group-hover:block mt-4">Изучить карточки <i class="fa-solid fa-angle-right ml-4"></i></a>
+                            <!-- <a href="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
+                        </div>
+                    </div>
+
+                    <div class="knowledge-base-card w-full group xl:w-[calc(25%-1.5rem)] mb-10 bg-[#f7f7ff] p-10 xl:pb-[5.7rem] hover:pb-10 rounded-[20px] overflow-xl:hidden cursor-pointer xl:mr-6">
+                        <img src="../dist/img/card.jpeg" alt="title" class="object-cover h-[190px] rounded-[20px] mb-14 group-hover:mb-2">
+                        <div>
+                            <div class="flex justify-between mb-6">
+                                <div class="tag tag-white rounded-[10px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
+                                <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60">+100 монеток</span></div>
+                                <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
+                                <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
+                            </div>
+                            <p class="text-3xl">Как хорошо вы знаете разные виды боли?</p>
+                            <a href="/" class="button button-indigo py-6 xl:hidden group-hover:block mt-4">Изучить карточки <i class="fa-solid fa-angle-right ml-4"></i></a>
+                            <!-- <a href="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
+                        </div>
+                    </div>
+
+                    <div class="knowledge-base-card w-full group xl:w-[calc(25%-1.5rem)] mb-10 bg-[#f7f7ff] p-10 xl:pb-[5.7rem] hover:pb-10 rounded-[20px] overflow-xl:hidden cursor-pointer xl:mr-6">
+                        <img src="../dist/img/card.jpeg" alt="title" class="object-cover h-[190px] rounded-[20px] mb-14 group-hover:mb-2">
+                        <div>
+                            <div class="flex justify-between mb-6">
+                                <div class="tag tag-white rounded-[10px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
+                                <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60">+100 монеток</span></div>
+                                <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
+                                <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
+                            </div>
+                            <p class="text-3xl">Как хорошо вы знаете разные виды боли?</p>
+                            <a href="/" class="button button-indigo py-6 xl:hidden group-hover:block mt-4">Изучить карточки <i class="fa-solid fa-angle-right ml-4"></i></a>
+                            <!-- <a href="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
+                        </div>
+                    </div>
+
+                    <div class="knowledge-base-card w-full group xl:w-[calc(25%-1.5rem)] mb-10 bg-[#f7f7ff] p-10 xl:pb-[5.7rem] hover:pb-10 rounded-[20px] overflow-xl:hidden cursor-pointer xl:mr-6">
+                        <img src="../dist/img/card.jpeg" alt="title" class="object-cover h-[190px] rounded-[20px] mb-14 group-hover:mb-2">
+                        <div>
+                            <div class="flex justify-between mb-6">
+                                <!-- <div class="tag tag-white rounded-[10px]"><i class="fa-regular fa-star mr-2"></i> Новое</div> -->
+                                <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60">+100 монеток</span></div>
+                                <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
+                                <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
+                            </div>
+                            <p class="text-3xl">Как хорошо вы знаете разные виды боли?</p>
+                            <a href="/" class="button button-indigo py-6 xl:hidden group-hover:block mt-4">Изучить карточки <i class="fa-solid fa-angle-right ml-4"></i></a>
+                            <!-- <a href="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
+                        </div>
+                    </div>
+
+                    <div class="knowledge-base-card w-full group xl:w-[calc(25%-1.5rem)] mb-10 bg-[#f7f7ff] p-10 xl:pb-[5.7rem] hover:pb-10 rounded-[20px] overflow-xl:hidden cursor-pointer xl:mr-6">
+                        <img src="../dist/img/card.jpeg" alt="title" class="object-cover h-[190px] rounded-[20px] mb-14 group-hover:mb-2">
+                        <div>
+                            <div class="flex justify-between mb-6">
+                                <!-- <div class="tag tag-white rounded-[10px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
+                                <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60">+100 монеток</span></div> -->
+                                <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div>
+                                <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
+                            </div>
+                            <p class="text-3xl">Как хорошо вы знаете разные виды боли?</p>
+                            <a href="/" class="button button-indigo py-6 xl:hidden group-hover:block mt-4">Изучить карточки <i class="fa-solid fa-angle-right ml-4"></i></a>
+                            <!-- <a href="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
+                        </div>
+                    </div>
+
+                    <div class="knowledge-base-card w-full group xl:w-[calc(25%-1.5rem)] mb-10 bg-[#f7f7ff] p-10 xl:pb-[5.7rem] hover:pb-10 rounded-[20px] overflow-xl:hidden cursor-pointer xl:mr-6">
+                        <img src="../dist/img/card.jpeg" alt="title" class="object-cover h-[190px] rounded-[20px] mb-14 group-hover:mb-2">
+                        <div>
+                            <div class="flex justify-between mb-6">
+                                <!-- <div class="tag tag-white rounded-[10px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
+                                <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60">+100 монеток</span></div> -->
+                                <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
+                                <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div>
+                            </div>
+                            <p class="text-3xl">Как хорошо вы знаете разные виды боли?</p>
+                            <!-- <a href="/" class="button button-indigo py-6 xl:hidden group-hover:block mt-4">Изучить карточки <i class="fa-solid fa-angle-right ml-4"></i></a> -->
+                            <a href="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="knowledge-base-card w-full group xl:w-[calc(25%-1.5rem)] mb-10 bg-[#f7f7ff] p-10 xl:pb-[5.7rem] hover:pb-10 rounded-[20px] overflow-xl:hidden cursor-pointer xl:mr-6">
+                        <img src="../dist/img/card.jpeg" alt="title" class="object-cover h-[190px] rounded-[20px] mb-14 group-hover:mb-2">
+                        <div>
+                            <div class="flex justify-between mb-6">
+                                <!-- <div class="tag tag-white rounded-[10px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
+                                <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60">+100 монеток</span></div> -->
+                                <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
+                                <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div>
+                            </div>
+                            <p class="text-3xl">Как хорошо вы знаете разные виды боли?</p>
+                            <!-- <a href="/" class="button button-indigo py-6 xl:hidden group-hover:block mt-4">Изучить карточки <i class="fa-solid fa-angle-right ml-4"></i></a> -->
+                            <a href="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-black pb-16">
+        <div class="container">
+            <a href="/"><img src="../dist/img/icons/logo_white.svg" alt="logo"></a>
+            <span class="text-xl opacity-60 text-white">Все права защищены
+                <script>document.write(new Date().getFullYear())</script>г.
+            </span>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../dist/js/index.js"></script>
+
+</html>

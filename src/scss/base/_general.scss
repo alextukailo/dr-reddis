@@ -554,10 +554,10 @@ template {
 }
 
 .section {
-  // padding: 7rem 0;
+  padding: 6rem 0;
 
   @include mobile {
-    // padding: 5rem 0;
+    padding: 0;
   }
 
   &__heading {
@@ -651,6 +651,10 @@ template {
   ul li {
     list-style: disc !important;
   }
+}
+
+.bg-blur {
+  background: var(--blur);
 }
 
 .text-c-normal {

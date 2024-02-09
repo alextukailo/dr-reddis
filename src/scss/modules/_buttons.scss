@@ -69,4 +69,13 @@
       color: var(--colorMain);
     }
   }
+
+  &.button-blur {
+    background: var(--blur);
+    color: var(--colorMain);
+    &:hover {
+      background: var(--buttonBlackHover);
+      color: var(--colorMain);
+    }
+  }
 }
