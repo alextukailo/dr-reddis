@@ -10,11 +10,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+        integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-    <body class="container h-[100vh] flex items-center page-free-styling">
+
+<body>
+    <div class="container h-[100vh] flex items-center page-free-styling">
         <div>
             <h3>Dr Reddis pages</h3>
-            <ul class="[&_li]:text-3xl">
+            <ul class="[&_li]:text-3xl mb-24">
                 <li>
                     <a target="_blank" href="./pages/home.html">Home</a>
                 </li>
@@ -28,13 +33,295 @@
                     <a target="_blank" href="./pages/interactive.html">Лаборатория -> Интерактив</a>
                 </li>
                 <li>
-                    <a target="_blank" href="./pages/knowledge-base-single.html">Лаборатория -> База знаний -> Статья</a>
+                    <a target="_blank" href="./pages/knowledge-base-single.html">Лаборатория -> База знаний ->
+                        Статья</a>
                 </li>
                 <li>
                     <a target="_blank" href="./pages/self-control-single.html">Лаборатория -> Самоконтроль -> Статья</a>
                 </li>
             </ul>
+            <div>
+                <button onclick="login.showModal()" class="button button_small button-black mb-6">
+                    Войти
+                </button>
+                <button onclick="register.showModal()" class="button button_small button-black mb-6">
+                    Зарегистрироваться
+                </button>
+                <button onclick="registerProgram.showModal()" class="button button_small button-black mb-6">
+                    Зарегистрироваться + программа
+                </button>
+                <button onclick="exit.showModal()" class="button button_small button-black mb-6">
+                    Выйти из профиля
+                </button>
+                <button onclick="successRegister.showModal()" class="button button_small button-black mb-6">
+                    Успешная регистрация
+                </button>
+                <button onclick="billRegister.showModal()" class="button button_small button-black mb-6">
+                    Регистрация нового чека
+                </button>
+                <button onclick="dataChanges.showModal()" class="button button_small button-black mb-6">
+                    Изменение данных
+                </button>
+                <button onclick="chooseMonster.showModal()" class="button button_small button-black mb-6">
+                    Выберите своего монстра
+                </button>
+            </div>
         </div>
-    </body>
-    <script src="https://cdn.tailwindcss.com"></script>
+    </div>
+    <footer class="bg-black pb-16">
+        <div class="container">
+            <a href="/"><img src="./dist/img/icons/logo_white.svg" alt="logo"></a>
+            <span class="text-xl opacity-60 text-white">Все права защищены
+                <script>document.write(new Date().getFullYear())</script>г.
+            </span>
+        </div>
+
+        <!-- notifications -->
+
+        <!-- get coins notification -->
+        <div id="coinNotification" class="notification fadeout">
+            <div class="relative flex items-center justify-between">
+                <i class="absolute -top-6 -right-6 fa-solid p-4 text-gray-400 fa-xmark cursor-pointer"></i>
+                <img class="w-24 mr-6" src="./dist/img/icons/coin.svg">
+                <span class="text-[#c9c6ff] font-bold">+<span>100</span> монеток <br> за прохождение теста</span>
+            </div>
+        </div>
+
+        <!-- modals -->
+
+        <!-- login modal -->
+        <dialog id="login" class="!fixed max-w-[600px] w-full relative rounded-[30px] bg-white p-[17px] xl:px-[75px] xl:py-[100px]">
+            <div class="button button_small button-ghost absolute top-10
+            right-10" onclick="login.close()">
+                Закрыть <i class="fa-solid fa-xmark ml-10"></i>
+            </div>
+            <h3 class="flex text-5xl text-center font-bold mb-14"><img class="mr-4"
+                    src="./dist/img/icons/enter-login.svg"> Войти в личный кабинет</h3>
+            <form class="form-fieldset" action="#">
+                <label class="mb-6">
+                    <input type="text" class="input" name="login" required placeholder="Номер телефона или эл. почта">
+                </label>
+                <label class="mb-6">
+                    <input type="text" class="input" name="password" required placeholder="Пароль">
+                </label>
+                <div class="flex flex-wrap">
+                    <button class="button button-indigo px-14 xl:mr-10" type="submit">Войти <i
+                            class="fa-solid fa-angle-right ml-6"></i></button>
+                    <div>
+                        <div onclick="login.close(); register.showModal();" class="block underline cursor-pointer mb-4">
+                            Зарегистрироваться</div>
+                        <a href="/forgot-password" class="block underline opacity-60">Забыли пароль?</a>
+                    </div>
+                </div>
+            </form>
+        </dialog>
+
+        <!-- register modal -->
+        <dialog id="register" class="!fixed max-w-[600px] w-full relative rounded-[30px] bg-white p-[17px] xl:px-[75px] xl:py-[100px]">
+            <div class="button button_small button-ghost absolute top-10
+            right-10" onclick="register.close()">
+                Закрыть <i class="fa-solid fa-xmark ml-10"></i>
+            </div>
+            <h3 class="flex text-5xl text-center font-bold mb-14"><img class="mr-4"
+                    src="./dist/img/icons/enter-login.svg">Зарегистрироваться</h3>
+            <form class="form-fieldset" onsubmit="successRegister.showModal()">
+                <label class="mb-6">
+                    <input type="text" class="input" name="name" required placeholder="Введите ФИО">
+                </label>
+                <label class="mb-6">
+                    <input type="email" class="input" name="email" required placeholder="Введите эл. почту">
+                </label>
+                <div class="!flex items-center mb-6 text-[#7f7f7f]">
+                    <input id="term" class="peer hidden" type="checkbox" name="term" />
+                    <label for="term" class="relative flex items-center cursor-pointer select-none text-slate-400 pl-10
+                        before:absolute before:left-0 before:flex before:h-4 before:w-4 
+                        before:items-center before:justify-center before:rounded-full before:p-4 before:border-[2px] 
+                        before:border-slate-400 before:bg-white before:transition-[background-color] 
+                        before:duration-300 before:ease-in before:content-[''] 
+                        peer-checked:before:content-['●']
+                        peer-checked:before:text-xl
+                        before:scale-75
+                        peer-checked:before:transition-[background-color] 
+                        peer-checked:before:duration-300 peer-checked:before:ease-in">
+                        <span class="text-[#7f7f7f] text-xl">Я принимаю <a href="/terms" class="underline">условия
+                                обработки персональных данных</a></span>
+                    </label>
+                </div>
+                <button class="button button-indigo px-14 xl:mr-10 w-full" type="submit">Зарегистрироваться <i
+                        class="fa-solid fa-angle-right ml-6"></i></button>
+            </form>
+        </dialog>
+
+         <!-- registerProgram modal -->
+         <dialog id="registerProgram" class="!fixed max-w-[900px] w-full relative rounded-[30px] bg-white p-[17px] xl:px-[60px] xl:py-[60px] !pt-[100px]">
+            <div class="button button_small button-ghost absolute top-10
+            right-10" onclick="registerProgram.close()">
+                Закрыть <i class="fa-solid fa-xmark ml-10"></i>
+            </div>
+            <h3 class="text-5xl text-center leading-snug font-bold mb-6">
+                Регистрируйтесь и становитесь участником программы лояльности, чтобы просматривать больше контента и получать призы!
+            </h3>
+            <p class="text-xl text-center mb-10">
+                Заполните форму ниже и получите <br> доступ к порталу
+            </p>
+            <div class="flex flex-wrap">
+                <form class="form-fieldset w-full xl:w-1/2" action="#">
+                    <label class="mb-6">
+                        <input type="text" class="input" name="name" required placeholder="Введите ФИО">
+                    </label>
+                    <label class="mb-6">
+                        <input type="email" class="input" name="email" required placeholder="Введите эл. почту">
+                    </label>
+                    <div class="!flex items-center mb-6 text-[#7f7f7f]">
+                        <input id="term" class="peer hidden" type="checkbox" name="term" />
+                        <label for="term" class="relative flex items-center cursor-pointer select-none text-slate-400 pl-10
+                            before:absolute before:left-0 before:flex before:h-4 before:w-4 
+                            before:items-center before:justify-center before:rounded-full before:p-4 before:border-[2px] 
+                            before:border-slate-400 before:bg-white before:transition-[background-color] 
+                            before:duration-300 before:ease-in before:content-[''] 
+                            peer-checked:before:content-['●']
+                            peer-checked:before:text-xl
+                            before:scale-75
+                            peer-checked:before:transition-[background-color] 
+                            peer-checked:before:duration-300 peer-checked:before:ease-in">
+                            <span class="text-[#7f7f7f] text-xl">Я принимаю <a href="/terms" class="underline">условия
+                                    обработки персональных данных</a></span>
+                        </label>
+                    </div>
+                    <button class="button button-indigo px-14 xl:mr-10 w-full" type="submit">Зарегистрироваться <i
+                            class="fa-solid fa-angle-right ml-6"></i></button>
+                </form>
+                <div class="w-full pl-14 xl:w-1/2">
+                    <img class="w-full rounded-[30px]" src="./dist/img/chydik.jpeg">
+                </div>
+            </div>    
+        </dialog>
+
+        <!-- exit profile modal -->
+        <dialog id="exit" class="!fixed max-w-[790px] w-full relative rounded-[30px] bg-white p-[17px] xl:px-[150px] xl:py-[50px]">
+            <h3 class="flex text-5xl text-center leading-tight font-bold mb-14">Уверены что хотите выйти
+                из личного кабинета?</h3>
+            <p class="text-xl text-center mb-16">
+                Закрытый контент недоступен <br> неавторизированным пользователям
+            </p>
+            <div class="flex items-center justify-between max-w-[225px] mx-auto">
+                <div onclick="exit.close()" class="button button-ghost">Назад</div>
+                <a href="./" class="button button-indigo">Выйти <i class="fa-solid fa-angle-right ml-6"></i>
+                </a>
+            </div>
+        </dialog>
+
+        <!-- success registration modal -->
+        <dialog id="successRegister"
+            class="!fixed max-w-[780px] w-full relative rounded-[30px] bg-white p-[17px] xl:px-[150px] xl:py-[50px]">
+            <div class="button button_small button-ghost absolute top-10
+            right-10" onclick="successRegister.close()">
+                Закрыть <i class="fa-solid fa-xmark ml-10"></i>
+            </div>
+            <img src="./dist/img/icons/success.svg" class="block mx-auto mb-10">
+            <h3 class="flex justify-center text-5xl text-center font-bold mb-10">Вы успешно зарегистрированы!</h3>
+            <p class="text-xl text-center mb-16">
+                Теперь вам доступен закрытый <br> контент и участие в программе <br> лояльности.
+            </p>
+            <a href="/profile" class="button button-indigo mx-auto">Перейти в личный кабинет <i
+                    class="fa-solid fa-angle-right ml-6"></i>
+            </a>
+        </dialog>
+
+        <!-- bill registration modal -->
+        <dialog id="billRegister"
+            class="!fixed max-w-[560px] w-full relative rounded-[30px] bg-white p-[17px] xl:p-[60px] !pt-[80px]">
+            <div class="button button_small button-ghost absolute top-10
+            right-10" onclick="billRegister.close()">
+                Закрыть <i class="fa-solid fa-xmark ml-10"></i>
+            </div>
+            <h3 class="flex justify-center text-5xl font-bold mb-10">Регистрация нового чека</h3>
+            <form class="form-fieldset mb-6" action="#">
+                <label class="mb-6">
+                    <input type="text" class="input" name="bill_number" required placeholder="Введите номер чека">
+                </label>
+                <div class="mb-6">
+                    <input type="file" name="file" id="file" class="file hidden" required>
+                    <label for="file"
+                        class="!flex items-center justify-center cursor-pointer select-none h-[180px] rounded-[30px] w-full bg-[#f2f5f8]">
+                        <div>
+                            <div id="fileLabel"></div>
+                            <span id="fileInfo" class="block mx-auto text-center underline opacity-30">Прикрепить фото
+                                чека</span>
+                        </div>
+                    </label>
+                </div>
+                <button class="button button-indigo w-full px-14 xl:mr-10" type="submit">Зарегистрировать чек</button>
+            </form>
+            <p class="text-xl text-center opacity-30">
+                Есть проблемы? Обратитесь в поддержку по номеру или почте:
+                <a class="block underline" href="tel:+7 999 999 99 99">+7 999 999 99 99</a>
+                <a class="block underline" href="mailto:podderzhka@mail.ru">podderzhka@mail.ru</a>
+            </p>
+            <script>
+                    (function () {
+                        const file = document.querySelector('input[type="file"]');
+                        const fileInfo = document.getElementById('fileInfo');
+                        const fileLabel = document.getElementById('fileLabel');
+
+                        const fileLabelHTML = `<div class="flex justify-center mb-6"><img src="./dist/img/icons/success.svg" class="block w-[21px] mr-4"> Успешно загружено</div>`
+
+                        file.addEventListener('change', (e) => {
+                            e.preventDefault();
+                            const files = e.target.files;
+                            const fileName = files[0].name;
+                            if (!!fileName) {
+                                fileInfo.innerText = fileName;
+                                fileLabel.innerHTML = fileLabelHTML;
+                            }
+                        });
+                    })();
+            </script>
+        </dialog>
+
+        <!-- data changes modal -->
+        <dialog id="dataChanges"
+            class="!fixed max-w-[780px] w-full relative rounded-[30px] bg-white p-[17px] xl:px-[150px] xl:py-[50px] !pt-[80px]">
+            <div class="button button_small button-ghost absolute top-10
+            right-10" onclick="dataChanges.close()">
+                Закрыть <i class="fa-solid fa-xmark ml-10"></i>
+            </div>
+            <h3 class="text-5xl text-center font-bold mb-10">Изменение данных</h3>
+            <p class="text-xl text-center mb-16">
+                Чтобы внести изменения в данные вашего профиля <br> (сменить почтовый адрес или имя пользователя) <br> обратитесь в поддержку.
+            </p>
+            <a class="block text-xl text-center underline" href="mailto:podderzhka@mail.ru">podderzhka@mail.ru</a>
+        </dialog>
+
+        <!-- choose the monster modal -->
+        <dialog id="chooseMonster"
+            class="!fixed max-w-[780px] w-full relative rounded-[30px] bg-white p-[17px] xl:p-[60px] !pt-[70px]">
+            <div class="button button_small button-ghost absolute top-10
+            right-10" onclick="chooseMonster.close()">
+                Закрыть <i class="fa-solid fa-xmark ml-10"></i>
+            </div>
+            <h3 class="text-5xl text-center font-bold mb-10">Выберите своего монстра</h3>
+            <p class="text-xl text-center mb-16">
+                Заполните форму ниже и получите <br> доступ к порталу
+            </p>
+            <div class="flex flex-wrap justify-center xl:flex-row-reverse mb-10">
+                <div class="max-w-[240px] w-full xl:mx-6">
+                    <img src="./dist/img/chydik.jpeg" class="rounded-[30px] mb-6">
+                    <h4 class="text-5xl text-center mb-10">Зубная боль</h4>
+                    <p class="text-xl text-center">Получите бонус</p>
+                </div>
+                <div class="max-w-[240px] w-full xl:mx-6">
+                    <img src="./dist/img/chydik.jpeg" class="rounded-[30px] mb-6">
+                    <h4 class="text-5xl text-center mb-10">Зубная боль</h4>
+                    <p class="text-xl text-center mb-10">Получите бонус</p>
+                    <button class="w-full button button-indigo xl:mr-10 w-full" type="submit">Зарегистрироваться <i
+                        class="fa-solid fa-angle-right ml-6"></i></button>
+                </div>
+            </div>
+        </dialog>
+    </footer>
+</body>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../dist/js/index.js"></script>
+
 </html>

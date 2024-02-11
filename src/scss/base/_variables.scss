@@ -30,6 +30,9 @@
   --buttonBackHover: rgba(255, 255, 255, 0.3);
   --buttonGhostHover: linear-gradient(47.64deg, rgb(194, 182, 255) 4.922%,rgba(177, 161, 255, 0) 104.988%),linear-gradient(138.04deg, rgb(150, 180, 255) 0%,rgb(166, 186, 255) 118.569%);
 
+  --inputBackground: linear-gradient(90deg, rgba(247,245,255,1) 0%, rgba(247,248,254,1) 100%, rgba(247,248,254,1) 100%);;
+  --inputBackgroundFocus: #F2F5F8;
+
   --shadowDark: linear-gradient(180deg, #1b3d64 0%, #0e2643 8.79%);
   --shadowDarkMenu: linear-gradient(180deg, #0e3e75 0%, #0e2643 52.79%);
 }
