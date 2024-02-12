@@ -553,6 +553,14 @@ template {
   position: absolute;
 }
 
+html:has(dialog[open]) {
+  overflow-y: hidden !important;
+}
+
+body:has(dialog[open]) {
+  overflow-y: hidden !important;
+}
+
 .section {
   padding: 6rem 0;
 
