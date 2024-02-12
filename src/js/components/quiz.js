@@ -107,8 +107,9 @@ const QuizComponent = () => {
         </div>`
     )).join('')
 
-
-    root.innerHTML = questions;
+    if (!!root) {
+        root.innerHTML = questions;
+    }
 }
 
 export default QuizComponent;
