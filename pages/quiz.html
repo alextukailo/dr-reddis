@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single post - Dr Reddis</title>
+    <link rel="stylesheet" href="../dist/css/index.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+    <body>
+        <main class="main">
+            <header id="header" class="header">
+                <div class="header__inner">
+                    <div class="header__content justify-between container border-b-[1px] border-white">
+                        <a href="/"><img src="../dist/img/icons/logo.svg" alt="logo"></a>
+                        <a href="/pages/profile" class="flex items-center">
+                            <div class="block mr-4 p-4 rounded-full flex items-center justify-center w-[50px] h-[50px] text-white bg-blur">
+                                <i class="fa-regular fa-user"></i>
+                            </div>
+                            <span class="text-2xl text-white">Вход</span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <section class="section">
+                <div class="container-md !max-w-[920px] mt-[120px]">
+                    <a href="../" class="button button_small button-ghost mb-10"><i class="fa-solid fa-angle-left"></i> Назад</a>
+                    <div class="flex mb-10">
+                        <div class="tag tag-ghost h-16 flex items-center !rounded-[10px] mr-4">Тест</div>
+                        <div class="tag tag-indigo !rounded-[10px]">Виды боли</div>
+                    </div>
+                    <h1 class="font-intertight-medium leading-tight text-5xl xl:text-7xl mb-10">Как хорошо вы знаете разные виды боли?</h1>
+                    <form class="quiz">
+                        <div id="quiz-questions" class="mb-10"></div>
+                        <!-- <button type="submit" class="button button-black">Узнать результат <i class="fa-solid fa-angle-right"></i></button> -->
+                        <a href="../pages/quiz-result.html" class="button button-black">Узнать результат <i class="fa-solid fa-angle-right"></i></a>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-black pb-16">
+            <div class="container">
+                <a href="/"><img src="../dist/img/icons/logo_white.svg" alt="logo"></a>
+                <span class="text-xl opacity-60 text-white">Все права защищены
+                    <script>document.write(new Date().getFullYear())</script>г.
+                </span>
+            </div>
+        </footer>
+    </body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../dist/js/index.js"></script>
+</html>

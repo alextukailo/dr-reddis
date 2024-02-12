@@ -550,7 +550,7 @@ template {
 }
 @media (max-width: 1025px) {
   .section {
-    padding: 0;
+    padding: 4rem 0;
   }
 }
 .section__heading {
