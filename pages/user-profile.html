@@ -4,97 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr Reddis</title>
-    <link rel="stylesheet" href="./dist/css/index.css">
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <title>Profile - Dr Reddis</title>
+    <link rel="stylesheet" href="../dist/css/index.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
-        integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+    <body>
+        <main class="main">
+            <header id="header" class="header">
+                <div class="header__inner">
+                    <div class="header__content justify-between container border-b-[1px] border-white">
+                        <a href="/"><img src="../dist/img/icons/logo.svg" alt="logo"></a>
+                        <a href="/pages/profile" class="flex items-center">
+                            <div class="block mr-4 p-4 rounded-full flex items-center justify-center w-[50px] h-[50px] bg-white">
+                                <i class="fa-regular fa-user"></i>
+                            </div>
+                            <span class="text-2xl">Анна Иванова</span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <section class="section">
+                <div class="container-md !max-w-[600px] mt-[120px]">
+                    <div class="flex flex-wrap justify-between mb-16">
+                        <a href="../" class="button button_small button-ghost"><i class="fa-solid fa-angle-left"></i> Назад</a>
+                        <div onclick="exit.showModal()" class="button button_small button-ghost"><i class="fa-solid fa-person-running"></i> Выйти из личного кабинета</div>
+                    </div>
+                    <h1 class="font-intertight-medium !leading-tight text-5xl xl:text-7xl mb-10">
+                        Добро пожаловать, Анна!
+                    </h1>
 
-<body>
-    <div class="container flex items-center page-free-styling">
-        <div>
-            <h3>Dr Reddis pages</h3>
-            <ul class="[&_li]:text-3xl mb-24">
-                <li>
-                    <a target="_blank" href="./pages/home.html">Home</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./pages/knowledge-base.html">Лаборатория -> База знаний</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./pages/self-control.html">Лаборатория -> Самоконтроль</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./pages/interactive.html">Лаборатория -> Интерактив</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./pages/knowledge-base-single.html">Лаборатория -> База знаний ->
-                        Статья</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./pages/self-control-single.html">Лаборатория -> Самоконтроль -> Статья</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./pages/quiz.html">Квиз</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./pages/user-profile.html">Личный кабинет</a>
-                </li>
-            </ul>
-            <div>
-                <button onclick="login.showModal()" class="button button_small button-black mb-6">
-                    Войти
-                </button>
-                <button onclick="register.showModal()" class="button button_small button-black mb-6">
-                    Зарегистрироваться
-                </button>
-                <button onclick="registerProgram.showModal()" class="button button_small button-black mb-6">
-                    Зарегистрироваться + программа
-                </button>
-                <button onclick="exit.showModal()" class="button button_small button-black mb-6">
-                    Выйти из профиля
-                </button>
-                <button onclick="successRegister.showModal()" class="button button_small button-black mb-6">
-                    Успешная регистрация
-                </button>
-                <button onclick="billRegister.showModal()" class="button button_small button-black mb-6">
-                    Регистрация нового чека
-                </button>
-                <button onclick="dataChanges.showModal()" class="button button_small button-black mb-6">
-                    Изменение данных
-                </button>
-                <button onclick="chooseMonster.showModal()" class="button button_small button-black mb-6">
-                    Выберите своего монстра
-                </button>
-                <button onclick="quiz.showModal()" class="button button_small button-indigo mb-6">
-                    Опрос
-                </button>
+                    <div class="flex justify-between items-center p-6 rounded-[30px] bg-[#f1f2fe] mb-4">
+                        <div class="flex items-center">
+                            <div class="block mr-10 p-4 rounded-full flex items-center justify-center w-[69px] h-[69px] bg-[#a8b2ff]">
+                                <i class="fa-regular fa-user text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-[20px] mb-2">Анна Иванова</div>
+                                <div class="text-xl opacity-30">test@mail.ru</div>
+                            </div>
+                        </div>
+                        <button onclick="dataChanges.showModal()" class="button"><i class="fa-solid fa-marker opacity-30"></i></button>
+                    </div>
+
+                    <div 
+                        class="relative flex items-center p-6 rounded-[30px] h-[150px] bg-[#f1f2fe] mb-4"
+                        style="background: url('../dist/img/anouncement.jpeg') no-repeat center;"
+                    >
+                        <div class="text-4xl text-white">Место для яркого <br> анонса здесь!</div>
+                        <button class="button absolute top-0 right-0 text-white"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+
+                    <div class="p-14 rounded-[30px] bg-[#f1f2fe] mb-4">
+                        <h3 class="text-5xl !leading-tight mb-6">Уровень лояльности: 1</h3>
+                        <div class="flex flex-wrap">
+                            <div class="w-full xl:w-[22.9%] h-[40px] bg-gray-300 mt-4 mr-4"></div>
+                            <div class="w-full xl:w-[22.9%] h-[40px] bg-gray-300 mt-4 mr-4"></div>
+                            <div class="w-full xl:w-[22.9%] h-[40px] bg-gray-300 mt-4 mr-4"></div>
+                            <div class="w-full xl:w-[22.9%] h-[40px] bg-gray-300 mt-4 mr-4"></div>
+                        </div>
+                    </div>
+
+                    <div class="p-14 rounded-[30px] bg-[#f1f2fe] mb-4">
+                        <h3 class="text-5xl !leading-tight mb-6">Собранные монетки</h3>
+                        <p class="text-xl mb-10 opacity-60">
+                            Посмотрите текущий баланс заработанных монеток, а также ознакомьтесь с вашей историей начислений
+                        </p>
+                        <div class="flex flex-wrap items-center">
+                            <img class="w-36 object-contain mr-6" src="../dist/img/icons/coin.svg">
+                            <div class="mb-4">
+                                <div class="text-5xl mb-4">20 монеток</div>
+                                <a href="" class="text-xl opacity-30 underline">Посмотреть историю начислений и призов <i class="ml-4 fa-solid fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-14 rounded-[30px] bg-[#f1f2fe] mb-4">
+                        <h3 class="text-5xl !leading-tight mb-6">Регистрация чека</h3>
+                        <p class="text-xl mb-10 opacity-60">
+                            Регистрируйте чеки покупок  препаратов Найз, 
+                            Новиган и Кеторол и получайте монетки.
+                        </p>
+                        <button onclick="billRegister.showModal()" class="button button-black">Зарегистрировать новый чек</button>
+                    </div>
+
+                    <div class="p-14 rounded-[30px] bg-[#f1f2fe] mb-4">
+                        <h3 class="text-5xl !leading-tight mb-6">Программа лояльности <br> "На здоровье"</h3>
+                        <p class="text-xl mb-10 opacity-60">
+                            Ознакомьтесь с правилами, а также со списком призов
+                        </p>
+                        <button class="button button-black">Правила программы</button>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        <footer class="bg-black pb-16">
+            <div class="container">
+                <a href="/"><img src="../dist/img/icons/logo_white.svg" alt="logo"></a>
+                <span class="text-xl opacity-60 text-white">Все права защищены
+                    <script>document.write(new Date().getFullYear())</script>г.
+                </span>
             </div>
-        </div>
-    </div>
-    <footer class="bg-black pb-16">
-        <div class="container">
-            <a href="/"><img src="./dist/img/icons/logo_white.svg" alt="logo"></a>
-            <span class="text-xl opacity-60 text-white">Все права защищены
-                <script>document.write(new Date().getFullYear())</script>г.
-            </span>
-        </div>
 
-        <!-- notifications -->
-
-        <!-- get coins notification -->
-        <div id="coinNotification" class="notification fadeout">
-            <div class="relative flex items-center justify-between">
-                <i class="absolute -top-6 -right-6 fa-solid p-4 text-gray-400 fa-xmark cursor-pointer"></i>
-                <img class="w-24 mr-6" src="./dist/img/icons/coin.svg">
-                <span class="text-[#c9c6ff] font-bold">+<span>100</span> монеток <br> за прохождение теста</span>
-            </div>
-        </div>
 
         <!-- modals -->
 
@@ -134,7 +148,7 @@
                 Закрыть <i class="fa-solid fa-xmark ml-10"></i>
             </div>
             <h3 class="flex text-5xl text-center font-bold mb-14"><img class="mr-4"
-                    src="./dist/img/icons/enter-login.svg">Зарегистрироваться</h3>
+                    src="../dist/img/icons/enter-login.svg">Зарегистрироваться</h3>
             <form class="form-fieldset" onsubmit="successRegister.showModal()">
                 <label class="mb-6">
                     <input type="text" class="input" name="name" required placeholder="Введите ФИО">
@@ -205,7 +219,7 @@
                             class="fa-solid fa-angle-right ml-6"></i></button>
                 </form>
                 <div class="w-full xl:pl-14 xl:w-1/2">
-                    <img class="w-full rounded-[30px]" src="./dist/img/chydik.jpeg">
+                    <img class="w-full rounded-[30px]" src="../dist/img/chydik.jpeg">
                 </div>
             </div>
         </dialog>
@@ -232,7 +246,7 @@
             right-10" onclick="successRegister.close()">
                 Закрыть <i class="fa-solid fa-xmark ml-10"></i>
             </div>
-            <img src="./dist/img/icons/success.svg" class="hidden xl:block mx-auto mb-10">
+            <img src="../dist/img/icons/success.svg" class="hidden xl:block mx-auto mb-10">
             <h3 class="flex justify-center text-5xl text-center font-bold mb-10">Вы успешно зарегистрированы!</h3>
             <p class="text-xl text-center mb-16">
                 Теперь вам доступен закрытый <br> контент и участие в программе <br> лояльности.
@@ -278,7 +292,7 @@
                         const fileInfo = document.getElementById('fileInfo');
                         const fileLabel = document.getElementById('fileLabel');
 
-                        const fileLabelHTML = `<div class="flex justify-center mb-6"><img src="./dist/img/icons/success.svg" class="block w-[21px] mr-4"> Успешно загружено</div>`
+                        const fileLabelHTML = `<div class="flex justify-center mb-6"><img src="../dist/img/icons/success.svg" class="block w-[21px] mr-4"> Успешно загружено</div>`
 
                         file.addEventListener('change', (e) => {
                             e.preventDefault();
@@ -321,12 +335,12 @@
             </p>
             <div class="flex flex-wrap justify-center xl:flex-row-reverse mb-10">
                 <div class="max-w-[240px] w-full xl:mx-6">
-                    <img src="./dist/img/chydik.jpeg" class="rounded-[30px] mb-6">
+                    <img src="../dist/img/chydik.jpeg" class="rounded-[30px] mb-6">
                     <h4 class="text-5xl text-center mb-10">Зубная боль</h4>
                     <p class="text-xl text-center">Получите бонус</p>
                 </div>
                 <div class="max-w-[240px] w-full xl:mx-6">
-                    <img src="./dist/img/chydik.jpeg" class="rounded-[30px] mb-6">
+                    <img src="../dist/img/chydik.jpeg" class="rounded-[30px] mb-6">
                     <h4 class="text-5xl text-center mb-10">Зубная боль</h4>
                     <p class="text-xl text-center mb-10">Получите бонус</p>
                     <button class="w-full button button-indigo xl:mr-10 w-full" type="submit">Зарегистрироваться <i
@@ -342,7 +356,7 @@
                 <i class="fa-solid fa-angle-left"></i>
                 Назад
             </div>
-            <img src="./dist/img/backgrounds/quiz.jpeg"
+            <img src="../dist/img/backgrounds/quiz.jpeg"
                 class="w-full h-[220px] xl:h-[302px] rounded-[30px] object-cover mb-14" />
 
             <div class="flex justify-center mb-10">
@@ -363,9 +377,9 @@
             <a href="./pages/quiz.html" class="button button-black mx-auto">Начать прохождение <i class="fa-solid fa-angle-right ml-6"></i>
             </a>
         </dialog>
-    </footer>
-</body>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="./dist/js/index.js"></script>
 
+        </footer>
+    </body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../dist/js/index.js"></script>
 </html>
