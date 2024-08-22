@@ -3,6 +3,8 @@
 import cHeader from './components/header'
 import cSwiper from './components/swiper'
 import cQuiz from './components/quiz'
+import cFooter from './components/footer'
+import cScript from './components/script';
 
 import ResponsiveBackgroundHandler from './components/responsive'
 
@@ -16,6 +18,8 @@ const initScripts = {
     cSwiper()
     cQuiz()
     cTailwind()
+    cFooter()
+    cScript()
   },
 }
 initScripts.init()

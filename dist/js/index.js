@@ -39319,6 +39319,39 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./js/components/footer.js":
+/*!*********************************!*\
+  !*** ./js/components/footer.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+const Footer = () => {
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.footer__top-arrow').length) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".footer__top-arrow").on('click', function () {
+      var target = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-target');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('html, body').animate({
+        scrollTop: jquery__WEBPACK_IMPORTED_MODULE_0___default()(target).offset().top
+      }, 1500);
+    });
+  }
+  const myButton = document.getElementById("scroll-to-top");
+  const scrollThreshold = 150;
+  const scrollFunction = () => {
+    myButton.style.display = document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold ? "flex" : "none";
+  };
+  window.onscroll = scrollFunction;
+  scrollFunction();
+};
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+/***/ }),
+
 /***/ "./js/components/header.js":
 /*!*********************************!*\
   !*** ./js/components/header.js ***!
@@ -39393,6 +39426,15 @@ const Header = () => {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('#header').removeClass('colored');
     }
   });
+  const clickMobileMenu = () => {
+    const menuBtn = document.querySelector('.header__menu');
+    const nav = document.querySelector('.header__nav');
+    menuBtn.addEventListener('click', function () {
+      menuBtn.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+  };
+  clickMobileMenu();
 
   // mobileMenuButton.onclick = () => {
   //   if (!!mobileMenu.hidden) {
@@ -39541,6 +39583,35 @@ const ResponsiveBackgroundHandler = () => {
 
 /***/ }),
 
+/***/ "./js/components/script.js":
+/*!*********************************!*\
+  !*** ./js/components/script.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+const Script = () => {
+  console.log("test");
+  function calculateHeroWithMapSize() {
+    if (document.querySelector('.hero--map')) {
+      const hero = document.querySelector('.hero--map');
+      const map = document.querySelector('.hero--map .map');
+      const height = map.clientHeight;
+      hero.style.height = height + 'px';
+    }
+  }
+  window.addEventListener('resize', calculateHeroWithMapSize);
+  calculateHeroWithMapSize();
+};
+/* harmony default export */ __webpack_exports__["default"] = (Script);
+
+/***/ }),
+
 /***/ "./js/components/swiper.js":
 /*!*********************************!*\
   !*** ./js/components/swiper.js ***!
@@ -39589,9 +39660,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/header */ "./js/components/header.js");
 /* harmony import */ var _components_swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/swiper */ "./js/components/swiper.js");
 /* harmony import */ var _components_quiz__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/quiz */ "./js/components/quiz.js");
-/* harmony import */ var _components_responsive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/responsive */ "./js/components/responsive.js");
-/* harmony import */ var _components_tailwind__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/tailwind */ "./js/components/tailwind.js");
+/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/footer */ "./js/components/footer.js");
+/* harmony import */ var _components_script__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/script */ "./js/components/script.js");
+/* harmony import */ var _components_responsive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/responsive */ "./js/components/responsive.js");
+/* harmony import */ var _components_tailwind__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/tailwind */ "./js/components/tailwind.js");
 // import "../../dist/css/tailwind.css"
+
+
 
 
 
@@ -39600,11 +39675,13 @@ __webpack_require__.r(__webpack_exports__);
 
 const initScripts = {
   init: function () {
-    Object(_components_responsive__WEBPACK_IMPORTED_MODULE_3__["default"])();
+    Object(_components_responsive__WEBPACK_IMPORTED_MODULE_5__["default"])();
     Object(_components_header__WEBPACK_IMPORTED_MODULE_0__["default"])();
     Object(_components_swiper__WEBPACK_IMPORTED_MODULE_1__["default"])();
     Object(_components_quiz__WEBPACK_IMPORTED_MODULE_2__["default"])();
-    Object(_components_tailwind__WEBPACK_IMPORTED_MODULE_4__["default"])();
+    Object(_components_tailwind__WEBPACK_IMPORTED_MODULE_6__["default"])();
+    Object(_components_footer__WEBPACK_IMPORTED_MODULE_3__["default"])();
+    Object(_components_script__WEBPACK_IMPORTED_MODULE_4__["default"])();
   }
 };
 initScripts.init();

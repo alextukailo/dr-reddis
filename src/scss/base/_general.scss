@@ -60,7 +60,14 @@ table {
 
 .container {
   position: relative;
-  max-width: 110rem !important;
+  max-width: 114.4rem !important;
+  width: 100%;
+  padding: 0 1.7rem;
+  margin: 0 auto;
+}
+.container-big {
+  position: relative;
+  max-width: 123.4rem !important;
   width: 100%;
   padding: 0 1.7rem;
   margin: 0 auto;
@@ -591,6 +598,15 @@ body:has(dialog[open]) {
     width: 100%;
     opacity: 80%;
     margin: 0 auto;
+
+    &--bordered {
+      max-width: 55.7rem;
+      padding: 1.5rem 1rem;
+      border: 1px solid rgb(255, 255, 255);
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      background: rgba(244, 240, 233, 0.4);
+    }
 
     @include mobile {
       font-size: 1.3rem;
