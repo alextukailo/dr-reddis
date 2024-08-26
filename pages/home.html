@@ -301,12 +301,12 @@
             <footer class="footer bg-black">
                 <div class="container-big">
                     <div class="footer__inner">
-                        <div class="footer__top flex justify-between items-center">
-                            <div class="footer__top-left flex">
-                                <a href="#" class="footer__logo"><img src="../dist/img/icons/white-logo.svg" alt="Logo"/></a>
-                                <div class="footer__allowed-age flex items-center justify-center rounded-full">7+</div>
+                        <div class="footer__top flex flex-wrap justify-between items-start lg:items-center flex-col lg:flex-row">
+                            <div class="footer__top-left flex flex-col lg:flex-row">
+                                <a href="/" class="footer__logo mb-[18px] lg:mb-0"><img src="../dist/img/icons/white-logo.svg" alt="Logo"/></a>
+                                <div class="footer__allowed-age flex items-center justify-center rounded-full mb-[18px] lg:mb-0">7+</div>
                             </div>
-                            <div class="footer__top-right">
+                            <div class="footer__top-right ">
                                 <div class="footer__social flex items-center">
                                     <div class="footer__social-text">Поделиться:</div>
                                     <ul class="footer__social-list flex items-center">
@@ -316,7 +316,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="footer__center flex justify-between">
+                        <div class="footer__warning-text mb-[20px] lg:hidden">
+                            ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ, НЕОБХОДИМО ОЗНАКОМИТЬСЯ С ИНСТРУКЦИЕЙ ПО МЕДИЦИНСКОМУ ПРИМЕНЕНИЮ ИЛИ ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ СПЕЦИАЛИСТА
+                        </div>
+                        <div class="footer__center flex justify-between flex-wrap lg:flex-1">
                             <ul class="footer__links">
                                 <li><a href="#">Лицензия</a></li>
                                 <li><a href="#">Рекламодатель</a></li>
