@@ -171,10 +171,10 @@
                         </div>
                     </div>
                     <button class="button button-ghost xl:ml-auto mr-auto rounded-[60px]">Показать все<i class="ml-4 fa-solid fa-angle-down fa-xs"></i></button>
-                    <!-- <button class="button button-ghost ml-auto mr-auto mb-28 rounded-[60px]">Свернуть<i class="ml-4 fa-solid fa-angle-up fa-xs"></i></button> -->
+                    <button class="button button-ghost ml-auto mr-auto mb-28 rounded-[60px] hidden">Свернуть<i class="ml-4 fa-solid fa-angle-up fa-xs"></i></button>
                 </section>
-                <section class="blog__cards-wrapper overflow-hidden mb-[64px] xl:mb-[170px]">
-                    <div class="blog-cards-slider swiper">
+                <section class="blog__cards-wrapper overflow-hidden mb-[64px] xl:mb-[170px] mt-[-20px]">
+                    <div class="blog-cards-slider swiper relative">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <div class=" blog-cards-slide flex items-center p-[20px] rounded-[20px]">
@@ -220,17 +220,16 @@
                             </div>
                          </div>
                           </div>
-                          <div class="swiper-slide">Slide 2</div>
-                          <div class="swiper-slide">Slide 3</div>
-                        </div>                      
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                         
+                        </div>          
+                        <div class="swiper-button-prev hidden"></div>
+                        <div class="swiper-button-next hidden xl:block"></div>            
                       </div>
                 </section>
                 </div>
             </section>
         </main>
-        <div class="footer__wrapper" style="display: none;">
+        <div class="footer__wrapper">
             <section class="footer__warning hidden lg:block absolute bottom-full w-full p-[5rem_0_1.8rem]">
                 <div class="container-big">
                     <div class="footer__warning-text">
