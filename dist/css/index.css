@@ -59,21 +59,21 @@ table td:first-child {
 
 .container {
   position: relative;
-  max-width: 1144px !important;
-  max-width: 114.4rem !important;
+  max-width: 1150px !important;
+  max-width: 115rem !important;
   width: 100%;
-  padding: 0 24px;
-  padding: 0 2.4rem;
+  padding: 0 20px;
+  padding: 0 2rem;
   margin: 0 auto;
 }
 
 .container-big {
   position: relative;
-  max-width: 1234px !important;
-  max-width: 123.4rem !important;
+  max-width: 1240px !important;
+  max-width: 124rem !important;
   width: 100%;
-  padding: 0 24px;
-  padding: 0 2.4rem;
+  padding: 0 20px;
+  padding: 0 2rem;
   margin: 0 auto;
 }
 
