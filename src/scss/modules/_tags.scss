@@ -73,7 +73,11 @@
     background: var(--colorMain);
     color: var(--buttonWhiteColor);
   }
-
+  &.tag-violet {
+    color: var(--buttonWhiteColor);
+    background: linear-gradient(48deg, #F1EFFF 5.7%, rgba(244, 242, 254, 0.00) 103.13%), 
+    linear-gradient(138deg, #F0F4FE 0%, #F1F4FE 122.84%);  
+  }
   &.tag-green {
     background: var(--colorGreenSecondary);
     color: var(--colorGreen);

@@ -18,7 +18,7 @@
   &_small {
     font-size: 1.4rem;
     border-radius: 6rem;
-    padding: 1rem 1.5rem;
+    padding: 0.7rem 1.5rem;
   }
 
   @include mobile {
@@ -49,7 +49,7 @@
     background: var(--buttonBlueHover);
     color: var(--colorMain);
     &:hover {
-      background: var(--buttonBlueHover);
+      background: linear-gradient(48deg, #AA9BF5 5.7%, rgba(153, 136, 240, 0.00) 103.13%), linear-gradient(138deg, #7696E6 0%, #7A93E7 122.84%);
     }
   }
 
@@ -78,8 +78,21 @@
       color: var(--colorMain);
     }
   }
-
+  &.button-blur-dark {
+    background: var(--blur);
+    color: var(--colorTextGrey);
+    &:hover {
+      background: var(--buttonBlackHover);
+      color: var(--colorTextGrey);
+    }
+  }
   &.button-arrow {
     position: relative;
+  }
+  &.button-icon-left i {
+    margin-right: .7rem;
+  }
+  &.button-icon-right i {
+    margin-left: .7rem;
   }
 }

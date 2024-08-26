@@ -67,13 +67,14 @@ const Header = () => {
   });
 
   const clickMobileMenu = () => {
-    const menuBtn = document.querySelector('.header__menu');
-    const nav = document.querySelector('.header__nav');
-    menuBtn.addEventListener('click', function() {
-      menuBtn.classList.toggle('active');
-      nav.classList.toggle('active');
-
-    });
+    if (document.querySelector('.header__menu')) {
+      const menuBtn = document.querySelector('.header__menu');
+      const nav = document.querySelector('.header__nav');
+      menuBtn.addEventListener('click', function() {
+        menuBtn.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+    }
   }
   clickMobileMenu();
 
