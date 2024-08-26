@@ -11,7 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
     <body>
-        <header id="header" class="header">
+        <header id="header" class="header ">
             <div class="header__inner">
                 <div class="header__content justify-between container">
                     <a href="/" class="header__logo"><span>Планета</span> симптомов</a>
@@ -38,16 +38,16 @@
             </div>
         </header>
         <main>
-            <div class="blog__top responsive-backgound-url bg-cover w-[100vw] mt-[65px] xl:mt-0 h-[700px] xl:h-[760px] rounded-t-[30px] xl:rounded-t-[0] rounded-b-[30px] xl:rounded-b-[60px] overflow-hidden xl:flex items-center"
+            <div class="blog__top responsive-backgound-url bg-cover w-[100vw]  xl:mt-0 h-auto xl:h-[700px] xl:h-[760px] rounded-t-[30px] xl:rounded-t-[0] rounded-b-[30px] xl:rounded-b-[60px] overflow-hidden xl:flex items-center"
                 style="background-size: cover !important;"
                 data-bg-mobile="../dist/img/backgrounds/blog-mobile.png" 
                 data-bg-desktop="../dist/img/backgrounds/blog-desktop.png"
             >
-                <div class="container flex items-end justify-between h-[100%] xl:flex mt-24 xl:mt-0">
+                <div class="container flex items-end justify-between h-[100%] xl:flex xl:mt-24 xl:mt-0">
                     <div class="hidden lg:block lg:w-[45.05%]"><img class="" src="../dist/img/blog-hero-desktop.png" /></div>
-                    <div class="blog__top-info lg:w-[49.09%] pt-[56px] pb-[135px] lg:pt-[145px] lg:pb-[130px] ">
-                        <img class="lg:hidden" src="../dist/img/blog-hero-mobile.png"/>
-                        <div class="blog__top-links flex mb-[14px]">
+                    <div class="blog__top-info w-[100%] lg:w-[49.09%] pt-[56px] pb-[135px] lg:pt-[145px] lg:pb-[130px] ">
+                        
+                        <div class="blog__top-links justify-center xl:justify-start flex mb-[14px]">
                             <a href="../" class="blog__top-link button button_small button-icon-left button-blur-dark mr-[10px]">
                                 <i class="fa-solid text-white fa-angle-left"></i>Назад
                             </a>
@@ -55,18 +55,19 @@
                                 <i class="fa-solid fa-angle-right"></i>
                             </a>
                         </div>
-                        <h1 class="section__heading text-left text-black mb-6">База знаний</h1>
+                        <img class="lg:hidden mr-auto ml-auto mb-[20px]" src="../dist/img/blog-hero-mobile.png"/>
+                        <h1 class="section__heading sm:text-center xl:text-left text-black mb-6">Боль в спине</h1>
                         <div class="blog__top-description">
-                            <div class="blog__top-description-item flex mb-[15px] lg:mb-[20px]">
-                                <div class="label mr-[20px] p-[10px] rounded-[10px]"><span>Характеристика</span></div>
-                                <div class="text text-black">Острая или хроническая, тупая или невыносимая. <br>Не понимает шуток.</div>
+                            <div class="blog__top-description-item items-center xl:items-start flex-col xl:flex-row flex mb-[15px] lg:mb-[20px]">
+                                <div class="label w-auto max-w-max  xl:ml-0 xl:mr-[20px] p-[10px] rounded-[10px]"><span>Характеристика</span></div>
+                                <div class="text text-center xl:text-left text-black">Острая или хроническая, тупая или невыносимая. <br>Не понимает шуток.</div>
                             </div>
-                            <div class="blog__top-description-item flex mb-[15px] lg:mb-[20px] ">
-                                <div class="label mr-[20px] p-[10px] rounded-[10px]"><span>Способности</span></div>
-                                <div class="text text-black">Не дает уснуть, мешает думать, портит <br>настроение и ломает планы</div>
+                            <div class="blog__top-description-item items-center xl:items-start flex-col xl:flex-row flex mb-[15px] lg:mb-[20px] ">
+                                <div class="label w-auto max-w-max  xl:ml-0 xl:mr-[20px] p-[10px] rounded-[10px]"><span>Способности</span></div>
+                                <div class="text text-center xl:text-left text-black">Не дает уснуть, мешает думать, портит <br>настроение и ломает планы</div>
                             </div>
-                            <div class="blog__top-description-item flex items-center">
-                                <div class="label flex items-center mr-[20px] p-[10px] rounded-[10px]"><img class="mr-[9px]" src="../dist/img/icons/trap.svg" /><span>Ловушка для боли</span></div>
+                            <div class="blog__top-description-item justify-center xl:justify-start flex items-center">
+                                <div class="label flex items-center mr-[16px] xl:mr-[20px] p-[10px] rounded-[10px]"><img class="mr-[9px]" src="../dist/img/icons/trap.svg" /><span>Ловушка для боли</span></div>
                                 <div class="relative text text-black">
                                     <a class="link flex items-center"><span class="mr-[10px] underline">Найз Активгель</span> <img src="../dist/img/icons/link.svg" /></a>
                                     <div class="blog__top-description-tip absolute"><span>Хочу узнать больше!</span></div>
@@ -78,116 +79,101 @@
             </div>
             <section class="section">
 
-                <div class="container !max-w-[1200px] px-14 -mt-16 xl:mt-0">
-                    <div class="flex items-center mb-10">
-                        <h2 class="font-intertight-medium leading-tight text-7xl  mr-10">Каталог статей</h2>
+                <div class="container !max-w-[1200px] xl:mt-0">
+                    <div class="flex flex-wrap items-center mb-10">
+                        <h2 class="mb-[20px] xl:mb-0 font-intertight-medium leading-tight text-7xl  mr-10">Каталог статей</h2>
                         <a class="button button-ghost button-arrow-right rounded-[60px] "><span class="mr-[10px]">Больше в лаборатории</span><i class="fa-solid fa-angle-right"></i></a>
                     </div>
                     <section class="blog__cards-wrapper">
                     <div class="blog__cards flex flex-wrap justify-between [&>.blog__card:nth-child(3n)]:mr-0 mb-[20px]">
-                        <div class="blog__card w-full group xl:w-[calc(33%-1.5rem)] bg-white p-[2px] rounded-[20px] overflow-hidden cursor-pointer xl:mr-6">
+                        <div class="blog__card w-full group xl:w-[calc(33%-1.5rem)] mb-[20px] xl:mb-0 bg-white p-[2px] rounded-[20px] overflow-hidden cursor-pointer xl:mr-6">
                             <img src="../dist/img/blog-card.png" alt="title" class="object-cover w-[100%] h-[295px] rounded-[20px]">
-                            <div class="relative pt-5 pr-4 pb-5 pl-4 lg:p-12 mt-[-17px] rounded-[20px] bg-white">
+                            <div class="info-block relative  mt-[-17px] rounded-[20px] bg-white">
                                 <div class="flex items-center mb-6">
                                     <div class="pt-[7px] pb-[7px] pl-[10px] pr-[10px] tag tag-violet rounded-[10px] mr-[20px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
                                     <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60 text-[14px] ">+100 монеток</span></div>
-                                    <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
-                                    <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
                                 </div>
-                                <p class="text-3xl">Почему миллениалы не любят дантистов и почему мне это так нравится</p>
+                                <h4 class="title">Почему миллениалы не любят дантистов и почему мне это так нравится</h4>
                                 <a href="/" class="button button-indigo py-6 group-hover:block mt-8">Читать статью <i class="fa-solid fa-angle-right ml-4"></i></a>
-                                <!-- <a h   ref="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
                             </div>
                         </div>
-                        <div class="blog__card w-full group xl:w-[calc(33%-1.5rem)] bg-white p-[2px] rounded-[20px] overflow-hidden cursor-pointer xl:mr-6">
+                        <div class="blog__card w-full group xl:w-[calc(33%-1.5rem)] mb-[20px] xl:mb-0 bg-white p-[2px] rounded-[20px] overflow-hidden cursor-pointer xl:mr-6">
                             <img src="../dist/img/blog-card.png" alt="title" class="object-cover w-[100%] h-[295px] rounded-[20px]">
-                            <div class="relative pt-5 pr-4 pb-5 pl-4 lg:p-12 mt-[-17px] rounded-[20px] bg-white">
+                            <div class="info-block relative  mt-[-17px] rounded-[20px] bg-white">
                                 <div class="flex items-center mb-6">
                                     <div class="pt-[7px] pb-[7px] pl-[10px] pr-[10px] tag tag-violet rounded-[10px] mr-[20px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
                                     <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60 text-[14px] ">+100 монеток</span></div>
-                                    <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
-                                    <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
                                 </div>
-                                <p class="text-3xl">Почему миллениалы не любят дантистов и почему мне это так нравится</p>
+                                <h4 class="title">Почему миллениалы не любят дантистов и почему мне это так нравится</h4>
                                 <a href="/" class="button button-indigo py-6 group-hover:block mt-8">Читать статью <i class="fa-solid fa-angle-right ml-4"></i></a>
-                                <!-- <a h   ref="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
                             </div>
                         </div>
-                        <div class="blog__card w-full group xl:w-[calc(33%-1.5rem)] bg-white p-[2px] rounded-[20px] overflow-hidden cursor-pointer xl:mr-6">
+                        <div class="blog__card w-full group xl:w-[calc(33%-1.5rem)] mb-[20px] xl:mb-0 bg-white p-[2px] rounded-[20px] overflow-hidden cursor-pointer xl:mr-6">
                             <img src="../dist/img/blog-card.png" alt="title" class="object-cover w-[100%] h-[295px] rounded-[20px]">
-                            <div class="relative pt-5 pr-4 pb-5 pl-4 lg:p-12 mt-[-17px] rounded-[20px] bg-white">
+                            <div class="info-block relative  mt-[-17px] rounded-[20px] bg-white">
                                 <div class="flex items-center mb-6">
                                     <div class="pt-[7px] pb-[7px] pl-[10px] pr-[10px] tag tag-violet rounded-[10px] mr-[20px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
                                     <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60 text-[14px] ">+100 монеток</span></div>
-                                    <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
-                                    <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
                                 </div>
-                                <p class="text-3xl">Почему миллениалы не любят дантистов и почему мне это так нравится</p>
+                                <h4 class="title">Почему миллениалы не любят дантистов и почему мне это так нравится</h4>
                                 <a href="/" class="button button-indigo py-6 group-hover:block mt-8">Читать статью <i class="fa-solid fa-angle-right ml-4"></i></a>
-                                <!-- <a h   ref="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
                             </div>
                         </div>
-                        <div class="blog__card w-full group xl:w-[calc(33%-1.5rem)] bg-white p-[2px] rounded-[20px] overflow-hidden cursor-pointer xl:mr-6">
+                        <div class="blog__card w-full group xl:w-[calc(33%-1.5rem)] mb-[20px] xl:mb-0 bg-white p-[2px] rounded-[20px] overflow-hidden cursor-pointer xl:mr-6">
                             <img src="../dist/img/blog-card.png" alt="title" class="object-cover w-[100%] h-[295px] rounded-[20px]">
-                            <div class="relative pt-5 pr-4 pb-5 pl-4 lg:p-12 mt-[-17px] rounded-[20px] bg-white">
+                            <div class="info-block relative  mt-[-17px] rounded-[20px] bg-white">
                                 <div class="flex items-center mb-6">
                                     <div class="pt-[7px] pb-[7px] pl-[10px] pr-[10px] tag tag-violet rounded-[10px] mr-[20px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
                                     <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60 text-[14px] ">+100 монеток</span></div>
-                                    <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
-                                    <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
                                 </div>
-                                <p class="text-3xl">Почему миллениалы не любят дантистов и почему мне это так нравится</p>
+                                <h4 class="title">Почему миллениалы не любят дантистов и почему мне это так нравится</h4>
                                 <a href="/" class="button button-indigo py-6 group-hover:block mt-8">Читать статью <i class="fa-solid fa-angle-right ml-4"></i></a>
-                                <!-- <a h   ref="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
                             </div>
                         </div>
-                        <div class="blog__card w-full group xl:w-[calc(33%-1.5rem)] bg-white p-[2px] rounded-[20px] overflow-hidden cursor-pointer xl:mr-6">
+                        <div class="blog__card w-full group xl:w-[calc(33%-1.5rem)] mb-[20px] xl:mb-0 bg-white p-[2px] rounded-[20px] overflow-hidden cursor-pointer xl:mr-6">
                             <img src="../dist/img/blog-card.png" alt="title" class="object-cover w-[100%] h-[295px] rounded-[20px]">
-                            <div class="relative pt-5 pr-4 pb-5 pl-4 lg:p-12 mt-[-17px] rounded-[20px] bg-white">
+                            <div class="info-block relative  mt-[-17px] rounded-[20px] bg-white">
                                 <div class="flex items-center mb-6">
                                     <div class="pt-[7px] pb-[7px] pl-[10px] pr-[10px] tag tag-violet rounded-[10px] mr-[20px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
                                     <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60 text-[14px] ">+100 монеток</span></div>
-                                    <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
-                                    <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
                                 </div>
-                                <p class="text-3xl">Почему миллениалы не любят дантистов и почему мне это так нравится</p>
+                                <h4 class="title">Почему миллениалы не любят дантистов и почему мне это так нравится</h4>
                                 <a href="/" class="button button-indigo py-6 group-hover:block mt-8">Читать статью <i class="fa-solid fa-angle-right ml-4"></i></a>
-                                <!-- <a h   ref="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
                             </div>
                         </div>
-                        <div class="blog__card w-full group xl:w-[calc(33%-1.5rem)] bg-white p-[2px] rounded-[20px] overflow-hidden cursor-pointer xl:mr-6">
+                        <div class="blog__card w-full group xl:w-[calc(33%-1.5rem)] mb-[20px] xl:mb-0 bg-white p-[2px] rounded-[20px] overflow-hidden cursor-pointer xl:mr-6">
                             <img src="../dist/img/blog-card.png" alt="title" class="object-cover w-[100%] h-[295px] rounded-[20px]">
-                            <div class="relative pt-5 pr-4 pb-5 pl-4 lg:p-12 mt-[-17px] rounded-[20px] bg-white">
+                            <div class="info-block relative  mt-[-17px] rounded-[20px] bg-white">
                                 <div class="flex items-center mb-6">
                                     <div class="pt-[7px] pb-[7px] pl-[10px] pr-[10px] tag tag-violet rounded-[10px] mr-[20px]"><i class="fa-regular fa-star mr-2"></i> Новое</div>
                                     <div class="flex items-center text-2xl"><img class="w-[23px] object-cover mr-2" src="../dist/img/icons/coin.svg"><span class="opacity-60 text-[14px] ">+100 монеток</span></div>
-                                    <!-- <div class="tag tag-green rounded-[10px]"><i class="fa-regular fa-square-check mr-2"></i> Прочитано</div> -->
-                                    <!-- <div class="tag tag-ghost flex items-center w-max rounded-full"><i class="fa-solid fa-lock mr-4"></i> Доступно после <br> авторизации</div> -->
                                 </div>
-                                <p class="text-3xl">Почему миллениалы не любят дантистов и почему мне это так нравится</p>
+                                <h4 class="title">Почему миллениалы не любят дантистов и почему мне это так нравится</h4>
                                 <a href="/" class="button button-indigo py-6 group-hover:block mt-8">Читать статью <i class="fa-solid fa-angle-right ml-4"></i></a>
-                                <!-- <a h   ref="/" class="button button-black py-6 xl:hidden group-hover:block mt-4">Получить доступ <i class="fa-solid fa-angle-right ml-4"></i></a> -->
                             </div>
                         </div>
                     </div>
-                    <button class="button button-ghost xl:ml-auto mr-auto rounded-[60px]">Показать все<i class="ml-4 fa-solid fa-angle-down fa-xs"></i></button>
+                    <button class="button button-ghost mb-[50px] xl:mb-0 xl:ml-auto mr-auto rounded-[60px]">Показать все<i class="ml-4 fa-solid fa-angle-down fa-xs"></i></button>
                     <button class="button button-ghost ml-auto mr-auto mb-28 rounded-[60px] hidden">Свернуть<i class="ml-4 fa-solid fa-angle-up fa-xs"></i></button>
                 </section>
-                <section class="blog__cards-wrapper overflow-hidden mb-[64px] xl:mb-[170px] mt-[-20px]">
+                <section class="blog__cards-wrapper overflow-hidden mb-[20px] xl:mb-[64px] xl:mb-[170px] xl:mt-[-20px] mr-[-24px] xl:mr-0">
                     <div class="blog-cards-slider swiper relative">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <div class=" blog-cards-slide flex items-center p-[20px] rounded-[20px]">
-                            <div class="left xl:mr-16">
+                            <div class="left hidden xl:block xl:mr-16">
                                 <div class="image">
                                     <img src="../dist//img/blog-slider-image.png">
                                 </div>
                             </div>
                             <div class="right">
-                                <div class="flex items-center mb-5">
+                                <div class="flex items-center mb-[20px] xl:mb-5">
                                     <img class="mr-4 w-[40px] h-[40px] xl:w-[55px] xl:h-[55px] rounded-[55px]" src="../dist/img/blog-card-character.png">
                                     <div class="mr-4">Боль в спине</div>
                                     <button class="subscribe button button-ghost rounded-[60px] pt-[7px] pb-[7px] pr-[15px] pl-[15px] text-2xl">Подписаться<i class="fa-regular fa-square-plus fa-sm ml-4"></i></button>
+                                </div>
+                                <div class="image xl:hidden mb-[20px]">
+                                    <img src="../dist//img/blog-slider-image.png">
                                 </div>
                                 <div class="mb-4 text">«Я очень люблю внимание, и теперь у меня еще один способ его привлекать!»</div>
                                 <div class="blogs-cards-social flex items-center">
@@ -200,16 +186,19 @@
                           </div>
                           <div class="swiper-slide">
                             <div class=" blog-cards-slide flex items-center p-[20px] rounded-[20px]">
-                            <div class="left xl:mr-16">
+                            <div class="left hidden xl:block xl:mr-16">
                                 <div class="image">
                                     <img src="../dist//img/blog-slider-image.png">
                                 </div>
                             </div>
                             <div class="right">
-                                <div class="flex items-center mb-5">
+                                <div class="flex items-center mb-[20px] xl:mb-5">
                                     <img class="mr-4 w-[40px] h-[40px] xl:w-[55px] xl:h-[55px] rounded-[55px]" src="../dist/img/blog-card-character.png">
                                     <div class="mr-4">Боль в спине</div>
                                     <button class="subscribe button button-ghost rounded-[60px] pt-[7px] pb-[7px] pr-[15px] pl-[15px] text-2xl">Подписаться<i class="fa-regular fa-square-plus fa-sm ml-4"></i></button>
+                                </div>
+                                <div class="image xl:hidden mb-[20px]">
+                                    <img src="../dist//img/blog-slider-image.png">
                                 </div>
                                 <div class="mb-4 text">«Я очень люблю внимание, и теперь у меня еще один способ его привлекать!»</div>
                                 <div class="blogs-cards-social flex items-center">
@@ -219,8 +208,7 @@
                                 </div>
                             </div>
                          </div>
-                          </div>
-                         
+                          </div>    
                         </div>          
                         <div class="swiper-button-prev hidden"></div>
                         <div class="swiper-button-next hidden xl:block"></div>            

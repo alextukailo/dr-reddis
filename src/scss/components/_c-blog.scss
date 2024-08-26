@@ -37,7 +37,13 @@
         }
     }
     &__card {
+        .info-block { padding: 3rem; }
         box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.10);
+        .title {
+            font-family: "InterTight-Medium";
+            font-size: 2.4rem;
+            line-height: normal;
+        }
     }
     
     &-cards-slide {
@@ -85,5 +91,42 @@
            filter: blur(10px);
        }
    }
+   @media (max-width: 1023px) {
+    &__card {
+        .info-block { padding: 2rem 1.5rem;}
+        .title {
+            font-size: 2rem;
+        }
+    }
+        &__top-description-item {
+            & .label {
+                margin-bottom: .5rem;
+                font-size: 1.6rem;
+                span {
+                    font-size: 1.6rem;
+                }
+                img {
+                    max-width: 2.9rem;
+                }
+            }
+        }
+        &-cards-slide {
+            .text {
+                font-size: 2rem;
+            }
+        }
+   }
+   @media (max-width: 675px) {
+    &__top-description-tip {
+        left: 57px;
+        &::before {
+            transform: scaleX(-1);
+        }
+
+        span {
+            margin-top: 25px;
+            margin-left: -170px;
+        }
+    }
+   }
 }
-//blog__top-description-item
