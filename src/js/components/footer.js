@@ -8,15 +8,17 @@ const Footer = () => {
       });
     }
 	
-
-	const myButton = document.getElementById("scroll-to-top");
-  const scrollThreshold = 150;
-
-  const scrollFunction = () => {
-    myButton.style.display = (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) ? "flex" : "none";
+    const initScrollToTopButton = () => {
+      const topButton = document.getElementById("scroll-to-top");
+      const toggleButtonVisibility = () => {
+          const scrollThreshold = 150;
+          const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+          topButton.style.display = scrollPosition > scrollThreshold ? "block" : "none";
+      };
+      window.addEventListener('scroll', toggleButtonVisibility);
+      toggleButtonVisibility();
   };
-
-  window.onscroll = scrollFunction;
-  scrollFunction();
+  initScrollToTopButton();
+  
 }
 export default Footer;

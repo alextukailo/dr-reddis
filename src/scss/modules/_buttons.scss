@@ -57,7 +57,7 @@
     background: var(--colorBlack);
     color: var(--colorMain);
     &:hover {
-      background: var(--buttonBlackHover);
+      background: linear-gradient(48deg, #C2B6FF 5.7%, rgba(177, 161, 255, 0.00) 103.13%), linear-gradient(138deg, #96B4FF 0%, #A6BAFF 122.84%);
     }
   }
 
@@ -67,6 +67,22 @@
     &:hover {
       background: var(--buttonBlackHover);
       color: var(--colorMain);
+    }
+  }
+  &.button-white-icon {
+    display: flex;
+    padding: 1rem 2rem;
+    background: #ffffff;
+    color: var(--colorTextGrey);
+    img {
+      transition-duration: all .3s ease;
+    }
+    &:hover {
+      background: var(--buttonBlackHover);
+      color: var(--colorMain);
+      img {
+        filter: brightness(0) saturate(100%) invert(100%);
+      }
     }
   }
 
@@ -89,10 +105,10 @@
   &.button-arrow {
     position: relative;
   }
-  &.button-icon-left i {
+  &.button-icon-left i, &.button-icon-left img {
     margin-right: .7rem;
   }
-  &.button-icon-right i {
+  &.button-icon-right i, &.button-icon-right img {
     margin-left: .7rem;
   }
 }
