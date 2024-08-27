@@ -2262,7 +2262,7 @@ button.swiper-pagination-bullet {
   font-size: 1.4rem;
 }
 @media (min-width: 1024px) {
-  .blog-cards-slide .image {
+  .swiper-slide:not(.swiper-slide-active) .blog-cards-slide .image {
     opacity: 0.3;
     filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
     -webkit-filter: blur(10px);

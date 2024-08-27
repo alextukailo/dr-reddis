@@ -86,7 +86,7 @@
         
     }
     @media (min-width: 1024px) {
-        &-cards-slide  .image  {
+        .swiper-slide:not(.swiper-slide-active) &-cards-slide  .image  {
            opacity: .3;
            filter: blur(10px);
        }
