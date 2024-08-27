@@ -2242,6 +2242,7 @@ button.swiper-pagination-bullet {
 .blog-cards-slide .image img {
   position: relative;
   z-index: 1;
+  width: 100%;
   display: block;
   border-radius: 5px;
 }
