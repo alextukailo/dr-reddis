@@ -13,12 +13,12 @@ const Footer = () => {
       const toggleButtonVisibility = () => {
           const scrollThreshold = 150;
           const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
-          topButton.style.display = scrollPosition > scrollThreshold ? "block" : "none";
+          topButton.style.display = scrollPosition > scrollThreshold ? "flex" : "none";
       };
       window.addEventListener('scroll', toggleButtonVisibility);
       toggleButtonVisibility();
   };
   initScrollToTopButton();
-  
+
 }
 export default Footer;

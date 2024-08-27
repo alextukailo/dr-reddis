@@ -15,9 +15,9 @@
     letter-spacing: 0%;
     color: var(--colorGrey);
 
-    @include mobile {
-      font-size: 1.6rem;
-    }
+    // @include mobile {
+    //   font-size: 1.6rem;
+    // }
 
     &:last-child {
       color: var(--colorBlack);
