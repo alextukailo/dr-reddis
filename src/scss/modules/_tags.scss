@@ -50,7 +50,6 @@
     background: var(--tagIndigo);
     color: var(--buttonWhiteColor);
   }
-
   &.tag-black {
     background: var(--colorBlack);
     color: var(--colorMain);
@@ -58,18 +57,14 @@
       background: var(--buttonBlackHover);
     }
   }
-
-
   &.tag-white-secondary {
     background: var(--colorMain);
     color: var(--buttonWhiteColor);
   }
-
   &.tag-white-secondary {
     background: var(--colorMain);
     color: var(--buttonWhiteColor);
   }
-
   &.tag-white {
     background: var(--colorMain);
     color: var(--buttonWhiteColor);

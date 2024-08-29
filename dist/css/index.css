@@ -581,7 +581,7 @@ body:has(dialog[open]) {
 }
 @media (max-width: 1025px) {
   .section__heading {
-    font-size: 3.3rem;
+    font-size: 4.8rem;
   }
 }
 .section__description {
@@ -768,6 +768,18 @@ body:has(dialog[open]) {
   -webkit-text-fill-color: transparent;
 }
 
+.title-h1 {
+  font-family: "InterTight-SemiBold";
+  font-size: 80px;
+  font-size: 8rem;
+  line-height: normal;
+}
+
+@media (max-width: 1023px) {
+  .title-h1 {
+    font-size: 4.8rem;
+  }
+}
 .title-h2 {
   margin-bottom: 22px;
   margin-bottom: 2.2rem;
@@ -821,6 +833,11 @@ body:has(dialog[open]) {
   margin-top: 2rem;
 }
 
+@media (max-width: 1023px) {
+  p br {
+    display: none;
+  }
+}
 .blur-content {
   position: relative;
 }

@@ -583,7 +583,7 @@ body:has(dialog[open]) {
     text-align: center;
 
     @include mobile {
-      font-size: 3.3rem;
+      font-size: 4.8rem;
     }
   }
 
@@ -754,6 +754,16 @@ body:has(dialog[open]) {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.title-h1 {
+  font-family: "InterTight-SemiBold";
+  font-size: 8rem;
+  line-height: normal;
+}
+@media (max-width:1023px) {
+  .title-h1 {
+    font-size: 4.8rem;
+  }
+}
 .title-h2 {
   margin-bottom: 2.2rem;
   font-family: "InterTight-SemiBold";
@@ -794,6 +804,11 @@ body:has(dialog[open]) {
 .text-block {
   p+p {
     margin-top: 2rem;
+  }
+}
+@media (max-width: 1023px) {
+  p br {
+    display: none;
   }
 }
 
@@ -896,3 +911,4 @@ body:has(dialog[open]) {
 .select-items .select-item + .select-item {
   margin-top: 16px;
 }
+
