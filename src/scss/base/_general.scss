@@ -769,6 +769,7 @@ body:has(dialog[open]) {
   font-family: "InterTight-SemiBold";
   font-size: 4.8rem;
   font-weight: 600;
+  line-height: normal;
 }
 @media (max-width:1023px) {
   .title-h2 {
@@ -800,6 +801,18 @@ body:has(dialog[open]) {
   font-family: "InterTight-Medium";
   font-size: 1.8rem;
   line-height: 140%;
+}
+.text-label {
+  color: #A4A4A4;
+  font-family: "InterTight-Regular";
+  font-size: 1.4rem;
+  line-height: normal;
+}
+.text-label_medium {
+  color: #A4A4A4;
+  font-family: "InterTight-Medium";
+  font-size: 1.4rem;
+  line-height: normal;
 }
 .text-block {
   p+p {

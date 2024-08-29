@@ -50,6 +50,13 @@
     background: var(--tagIndigo);
     color: var(--buttonWhiteColor);
   }
+  @media (max-width: 1023px) {
+    &.tag-indigo_mobile {
+      color: #ffffff;
+      background: linear-gradient(48deg, #C2B6FF 5.7%, rgba(177, 161, 255, 0.00) 103.13%), linear-gradient(138deg, #96B4FF 0%, #A6BAFF 122.84%);
+    }
+  }
+ 
   &.tag-black {
     background: var(--colorBlack);
     color: var(--colorMain);
@@ -82,5 +89,21 @@
     padding: 1rem 1.2rem;
     border-radius: 1rem;
     width: 100% !important;
+  }
+  &.tag-image {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    padding-right: 1rem;
+    border-radius: 6rem;
+    font-size: 1.4rem;
+    font-family: "InterTight-Medium";
+    background: linear-gradient(48deg, #F1EFFF 5.7%, rgba(244, 242, 254, 0.00) 103.13%), linear-gradient(138deg, #F0F4FE 0%, #F1F4FE 122.84%);
+    img {
+      margin-right: .9rem;
+    }
+    span {
+      color: #8B89F0;
+    }
   }
 }

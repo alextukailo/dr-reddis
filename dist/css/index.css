@@ -787,6 +787,7 @@ body:has(dialog[open]) {
   font-size: 48px;
   font-size: 4.8rem;
   font-weight: 600;
+  line-height: normal;
 }
 
 @media (max-width: 1023px) {
@@ -826,6 +827,22 @@ body:has(dialog[open]) {
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 140%;
+}
+
+.text-label {
+  color: #A4A4A4;
+  font-family: "InterTight-Regular";
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: normal;
+}
+
+.text-label_medium {
+  color: #A4A4A4;
+  font-family: "InterTight-Medium";
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: normal;
 }
 
 .text-block p + p {
@@ -1181,6 +1198,12 @@ h4 {
   background: linear-gradient(47.64deg, rgb(241, 239, 255) 4.62%,rgba(244, 242, 254, 0) 105.713%),linear-gradient(138.04deg, rgb(240, 244, 254) 0%,rgb(241, 244, 254) 116.747%);
   color: #8B89F0;
 }
+@media (max-width: 1023px) {
+  .tag.tag-indigo_mobile {
+    color: #ffffff;
+    background: linear-gradient(48deg, #C2B6FF 5.7%, rgba(177, 161, 255, 0) 103.13%), linear-gradient(138deg, #96B4FF 0%, #A6BAFF 122.84%);
+  }
+}
 .tag.tag-black {
   background: #000000;
   color: #ffffff;
@@ -1213,6 +1236,29 @@ h4 {
   padding: 1rem 1.2rem;
   border-radius: 1rem;
   width: 100% !important;
+}
+.tag.tag-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  padding-right: 10px;
+  padding-right: 1rem;
+  border-radius: 6rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: "InterTight-Medium";
+  background: linear-gradient(48deg, #F1EFFF 5.7%, rgba(244, 242, 254, 0) 103.13%), linear-gradient(138deg, #F0F4FE 0%, #F1F4FE 122.84%);
+}
+.tag.tag-image img {
+  margin-right: 9px;
+  margin-right: 0.9rem;
+}
+.tag.tag-image span {
+  color: #8B89F0;
 }
 
 /**
@@ -2777,6 +2823,7 @@ button.swiper-pagination-bullet {
   position: relative;
 }
 .footer__warning {
+  z-index: 1;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, .2)), color-stop(91.6%, rgba(34, 34, 34, 0)));
   background: linear-gradient(0deg, rgba(0, 0, 0, .2) 0%, rgba(34, 34, 34, 0) 91.6%);
 }
