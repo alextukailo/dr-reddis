@@ -808,6 +808,14 @@ body:has(dialog[open]) {
   opacity: 0.7;
 }
 
+.title-body {
+  color: #000;
+  font-family: "InterTight-Medium";
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 140%;
+}
+
 .text-block p + p {
   margin-top: 20px;
   margin-top: 2rem;
@@ -830,6 +838,106 @@ body:has(dialog[open]) {
   background: linear-gradient(178deg, rgba(255, 255, 255, 0) -26.73%, #FFF 98.4%);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+}
+
+.custom-select {
+  position: relative;
+  display: block;
+  width: 180px;
+  width: 18rem;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 14px;
+  font-size: 1.4rem;
+  border: 1px solid #A4A4A4;
+  border-radius: 6rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #242424;
+  background: #fff;
+}
+
+.custom-select.disabled {
+  background: #F2F2F2;
+  border-radius: 6rem;
+}
+
+.select-head {
+  width: 100%;
+  max-width: 100%;
+  padding: 7px 35px 7px 15px;
+  line-height: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 1.4rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: #A4A4A4;
+}
+
+.select-head.open {
+  border-radius: 4px;
+}
+
+.select-head.open::after {
+  -webkit-transform: translateY(50%) rotate(180deg);
+          transform: translateY(50%) rotate(180deg);
+}
+
+.select-head::after {
+  position: absolute;
+  right: 14px;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  display: block;
+  width: 10px;
+  height: 10px;
+  content: "";
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='11' viewBox='0 0 10 11' fill='none'%3E%3Cg clip-path='url(%23clip0_4271_27140)'%3E%3Cpath d='M9.64282 3.25L5.24997 7.64286C5.2179 7.67702 5.17917 7.70425 5.13618 7.72287C5.09318 7.74148 5.04682 7.75109 4.99997 7.75109C4.95311 7.75109 4.90675 7.74148 4.86376 7.72287C4.82076 7.70425 4.78203 7.67702 4.74997 7.64286L0.357109 3.25' stroke='%23A4A4A4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_4271_27140'%3E%3Crect width='10' height='10' fill='white' transform='translate(10 0.5) rotate(90)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+}
+
+.select-items {
+  position: absolute;
+  top: 103%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  margin: 0;
+  padding: 20px;
+  padding: 2rem;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #FFF;
+  border-radius: 12px;
+  border: 1px solid #A4A4A4;
+}
+
+.select-items.active {
+  display: block;
+}
+
+.select-items .select-item {
+  position: relative;
+  cursor: pointer;
+  line-height: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #A4A4A4;
+}
+
+.select-items .select-item:hover {
+  color: #4F4F4F;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.select-items .select-item + .select-item {
+  margin-top: 16px;
 }
 
 @font-face {
@@ -1007,7 +1115,7 @@ h4 {
   padding: 1rem;
   font-size: 14px;
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 22px;
   letter-spacing: 0%;
   color: #000000;
@@ -1082,6 +1190,12 @@ h4 {
 .tag.tag-green {
   background: rgb(231, 239, 233);
   color: rgb(85, 169, 104);
+}
+.tag.tag-full {
+  padding: 10px 12px;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  width: 100% !important;
 }
 
 /**
