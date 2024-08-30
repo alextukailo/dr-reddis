@@ -2404,6 +2404,9 @@ button.swiper-pagination-bullet {
     height: unset !important;
   }
 }
+.hero-articles .hero-articles__description {
+  line-height: 140%;
+}
 
 .blog__top-description-item .label {
   height: -webkit-max-content;

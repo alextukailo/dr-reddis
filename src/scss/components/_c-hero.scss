@@ -45,11 +45,15 @@
       background-color: #ffffff;
     }
     &--map {
-      // 
       background-color: #000000;
     }
     & {
       height: unset!important;
+    }
+  }
+  &-articles {
+    & &__description {
+      line-height: 140%;
     }
   }
 }
