@@ -80,26 +80,28 @@ const QuizComponent = () => {
     const root = document.getElementById('quiz-questions');
 
     const questions = quiz.map((question, index) => (
-        `<div class="block bg-[#f7f8fe] p-[20px] xl:p-[30px] !pb-[10px] mb-10 rounded-[30px]">
-            <div class="flex flex-col xl:flex-row xl:items-center mb-12">
-                <div class="w-max mb-6 xl:mb-0 p-4 xl:px-[20px] xl:py-[12px] bg-[#a3b3ff] rounded-[20px] text-3xl xl:text-5xl text-white mr-6">${index < 10 ? '0' : ''}${index + 1}</div>
-                <h3 class="text-4xl">${question.heading}</h3>
+        `<div class="block bg-[#f7f8fe] p-[20px] !pb-[15px] lg:p-[30px] !lg:pb-[25px] mb-6 rounded-[30px]">
+            <div class="flex flex-col lg:flex-row lg:items-center mb-4 lg:mb-12">
+                <div class="position w-max mb-4 lg:mb-0 lg:mb-0 p-4 px-[10px] py-[5px] lg:px-[20px] lg:py-[10px] bg-[#a3b3ff] rounded-[10px] lg:rounded-[20px] text-[16px] lg:text-[30px] lg:title-h3 text-white mr-8">${index < 10 ? '0' : ''}${index + 1}</div>
+                <h3 class="title-h4 text-[20px] lg:text-[24px]">${question.heading}</h3>
             </div>
             <div class="flex flex-wrap">
             ${(question.variants.map((variant) => (
-                `<div class="!flex items-center mb-6 text-[#7f7f7f] bg-white rounded-[20px] p-6 mr-4 mb-4">
+                `<div class="!flex items-center text-[#7f7f7f] bg-white rounded-[60px] p-4 lg:p-6 mr-2 mb-2">
                 <input id="variant-${variant.title}" class="peer hidden" type="radio" name="${question.name}" value="${variant.title}" />
                 <label for="variant-${variant.title}" class="relative flex items-center cursor-pointer select-none text-slate-400 pl-14
                     before:absolute before:left-0 before:flex before:h-4 before:w-4 
                     before:items-center before:justify-center before:rounded-full before:p-4 before:border-[2px] 
                     before:border-slate-400 before:bg-white before:transition-[background-color] 
+                    peer-checked:before:border-indigo-300
                     before:duration-300 before:ease-in before:content-[''] 
                     peer-checked:before:content-['●']
+                    peer-checked:before:text-[#AAB2FF]
                     peer-checked:before:text-xl
                     before:scale-75
                     peer-checked:before:transition-[background-color] 
                     peer-checked:before:duration-300 peer-checked:before:ease-in">
-                    <span class="text-[#7f7f7f] text-2xl">${variant.title}</span>
+                    <span class="text-c-normal text-[14px] lg:text-[16px] text-black">${variant.title}</span>
                 </label>
             </div>`
             ))).join('')}
