@@ -56,6 +56,12 @@
       background: linear-gradient(48deg, #C2B6FF 5.7%, rgba(177, 161, 255, 0.00) 103.13%), linear-gradient(138deg, #96B4FF 0%, #A6BAFF 122.84%);
     }
   }
+  &.tag-lilac {
+    font-size: 1.4rem;
+    font-weight: 500;
+    background: linear-gradient(48deg, #C2B6FF 5.7%, rgba(177, 161, 255, 0.00) 103.13%), linear-gradient(138deg, #96B4FF 0%, #A6BAFF 122.84%);
+    color: #ffffff;
+  }
  
   &.tag-black {
     background: var(--colorBlack);
